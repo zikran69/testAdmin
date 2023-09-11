@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import kategori from '../kategori.json'
+import kategori from '../../kategori.json'
 import Search from "./Search.jsx";
 import Tambah from "./Tambah.jsx";
 import TabelKategori from "./TabelKategori.jsx";
