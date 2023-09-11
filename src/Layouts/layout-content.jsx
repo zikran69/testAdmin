@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import logo from '../assets/logo.png'
 
-const Layout = ()=>{
+const LayoutContent = ()=>{
     let userName = 'Admin';
     return(
     <>
@@ -83,4 +83,4 @@ const Layout = ()=>{
     </>
     )
 }
-export default Layout;
+export default LayoutContent;
