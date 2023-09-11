@@ -33,7 +33,7 @@ const LayoutContent = ()=>{
                             <Link to='/' className="hover:text-secondary-blue"><i className="ri-user-settings-line mr-2"></i>Administrator</Link>
                         </div>
                         <div className="pl-6">
-                            <Link to='/' className="hover:text-secondary-blue"><i className="ri-profile-line mr-2"></i>profil hotel</Link>
+                            <Link to='/profile' className="hover:text-secondary-blue"><i className="ri-profile-line mr-2"></i>profile hotel</Link>
                         </div>
                     </details>
                     <details open className="space-y-2">
