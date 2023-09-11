@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import logo from '../assets/logo.png'
+import LayoutContent from "./layout-content";
 
 const LayoutLogin = ()=>{
     let userName = 'Admin';
@@ -25,8 +25,8 @@ const LayoutLogin = ()=>{
             </div>
             <a href="#" className="text-primary-blue font-semibold hover:underline">Forgot Password?</a>
             </div>
-            <button type="submit" className="w-full bg-secondary-blue text-white py-2 rounded-md hover:bg-hover-blue">
-            Log In
+            <button type="button" className="w-full bg-secondary-blue text-white py-2 rounded-md hover:bg-hover-blue">
+            <Link to='kategori'>Log In</Link>
             </button>
             <div className="my-4 text-center">
             <span>Not an admin?
