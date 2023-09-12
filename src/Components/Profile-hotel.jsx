@@ -1,4 +1,3 @@
-
 const ProfileHotel = ()=>{
     return(
         <div className="w-full">
