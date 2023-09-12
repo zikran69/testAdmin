@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import kategori from '../../kategori.json'
 import Search from "./Search.jsx";
