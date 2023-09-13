@@ -1,5 +1,4 @@
-
-const ProfileHotel = ()=>{
+const ProfilePage = ()=>{
     return(
         <div className="w-full">
             <main className="bg-primary-gray grow overflow-y-auto h-[calc(100vh-67.33px)]">
@@ -51,4 +50,4 @@ const ProfileHotel = ()=>{
     )
 }
 
-export default ProfileHotel;
+export default ProfilePage;
