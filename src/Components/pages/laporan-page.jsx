@@ -15,7 +15,7 @@ export default function LaporanPage(){
                             <input type="search" placeholder="cari..." className="pl-4 border border-secondary-gray rounded-[20px] focus:outline-none focus:border-gray-500 text-center" />
                         </div>
                     </div>
-                    <table className="mb-4 text-zinc-600 w-full">
+                    <table className="mb-4 border-collapse  rounded-lg text-sm text-left text-gray-500 w-full">
                         <thead>
                             <tr>
                                 <th className="border border-b-2 border-opacity-20 border-secondary-gray p-4 text-left">No</th>

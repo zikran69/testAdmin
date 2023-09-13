@@ -5,7 +5,7 @@ export default function PesanKamarPage(){
         <main className="bg-primary-gray grow overflow-y-auto h-[calc(100vh-67.33px)]">
             <h1 className="m-4 text-2xl font-semibold">Pesan Kamar</h1>
             <div id="modal" className="bg-white border inset-0 rounded-lg mt-2 mx-4 mb-4 p-4 overflow-x-auto">
-                <form>
+                <form className="border-collapse  rounded-lg text-sm text-left text-gray-500">
                     <div className="p-4 flex gap-4 flex-wrap">
                         <div className="flex flex-col">
                             <label className="text-zinc-800 ">Kategori</label>

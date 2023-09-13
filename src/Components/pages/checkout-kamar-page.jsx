@@ -138,8 +138,8 @@ export default function CheckoutKamarpage(){
                                     className="px-2 py-1 border border-secondary-gray rounded-full focus:outline-secondary-gray" />
                             </div>
                         </div>
-                        <table className="text-zinc-600 bg-white border-collapse w-full">
-                            <thead>
+                        <table className="border-collapse  rounded-lg text-sm text-left text-gray-500 bg-white w-full">
+                            <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                                 <tr className="odd:bg-zinc-400 odd:bg-opacity-10 md:odd:bg-transparent">
                                     <th
                                         className="hidden md:table-cell capitalize border-2 border-opacity-10 border-secondary-gray p-2 text-left">
