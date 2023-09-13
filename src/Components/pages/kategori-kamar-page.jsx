@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import kategori from '../../kategori.json'
-import Search from "../Kategori/Search.jsx";
-import Tambah from "../Kategori/Tambah.jsx";
-import TabelKategori from "../Kategori/TabelKategori.jsx";
+import Search from "../file-bahe/Search.jsx";
+import Tambah from "../file-bahe/Tambah.jsx";
+import TabelKategori from "../file-bahe/TabelKategori.jsx";
 
 const KategoiKamarPage = (props)=>{
     const [storage, setStorage] = useState(kategori);
@@ -41,7 +41,6 @@ const KategoiKamarPage = (props)=>{
             </div>
             <TabelKategori dataKategori={storage} menghapus={deleteKategori}/>
         </form>
-        {/* <HapusKategori deleteKategori={deleteKategori}/> */}
     </div>
     </div>
     )

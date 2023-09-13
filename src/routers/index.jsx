@@ -1,11 +1,9 @@
 import { Routes,Route } from "react-router-dom";
 
 import ProtectedRoute from "./protected-route";
-import LoginPage from "../Components/pages/login-page";
-
 import PrivateRoute from "./private-route";
-import PersonalRoute from "./personal-route";
 
+import LoginPage from "../Components/pages/login-page";
 import DashboardPage from "../Components/pages/dashboard-pages";
 import ProfilePage from "../Components/pages/profile-page";
 import KategoriKamarPage from "../Components/pages/kategori-kamar-page";

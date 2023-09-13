@@ -1,6 +1,5 @@
 import logo from '../assets/logo.png';
-import { Link, Navigate, Outlet, useNavigate } from "react-router-dom";
-import LoginPage from '../Components/pages/login-page';
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import auth from '../utils/auth';
 
 function PrivateRoute() {
@@ -19,7 +18,7 @@ function PrivateRoute() {
                             <img className="w-32 ml-4" src={logo} alt="logo" />
                             <div className='flex items-center'>
                                 <p className="sm:text-xl ml-8 mr-2">admin</p>
-                                <button onClick={logout} title='keluar' className='hover:text-hover-blue lg:mx-2'><i class="ri-logout-circle-r-line text-xl"></i></button>
+                                <button onClick={logout} title='keluar' className='hover:text-hover-blue lg:mx-2'><i className="ri-logout-circle-r-line text-xl"></i></button>
                             </div>
                         </div>
                         <div className="lg:hidden">
