@@ -1,9 +1,8 @@
 import logo from '../assets/logo.png';
 import { Link, Navigate, Outlet } from "react-router-dom";
-import LoginPage from '../Components/pages/login-page';
 import auth from '../utils/auth';
 
-function PrivateRoute() {
+function PersonalRoute() {
     let userName = 'Admin';
     // true jika sudah login
     if(auth.isAuthenticated()){
@@ -46,7 +45,7 @@ function PrivateRoute() {
                                         className="ri-building-4-line mr-2"></i>Data Kamar<i className="ri-arrow-drop-down-line"></i>
                                     </summary>
                                     <div className="pl-6">
-                                        <Link to='/Kategori-kamar' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>Kategori Kamar</Link>
+                                        <Link to='/Kategori' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>Kategori Kamar</Link>
                                     </div>
                                     <div className="pl-6">
                                         <Link to='/' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>Lantai Kamar</Link>
@@ -59,7 +58,7 @@ function PrivateRoute() {
                                     <summary className="hover:text-secondary-blue cursor-pointer list-none space-y-2"><i
                                         className="ri-wallet-2-fill mr-2"></i>Transaksi<i className="ri-arrow-drop-down-line"></i></summary>
                                     <div className="pl-6">
-                                        <Link to='/pesan-kamar' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Pesan Kamar</Link>
+                                        <Link to='/pesankamar' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Pesan Kamar</Link>
                                     </div>
                                     <div className="pl-6">
                                         <Link to='/' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Check In</Link>
@@ -87,4 +86,4 @@ function PrivateRoute() {
     }
     
 }
-export default PrivateRoute;
+export default PersonalRoute;

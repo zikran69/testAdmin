@@ -17,7 +17,10 @@ const LoginPage = ()=>{
             const {token} = admin;
             auth.storeAuthCredential(token);
             return navigate('/dashboard');
-        }else alert('Username or Password is wrong ...'); 
+        }else{
+            alert('Username or Password is wrong ...'); 
+            return navigate('/');
+        }
     }
     
     return(
@@ -29,7 +32,7 @@ const LoginPage = ()=>{
                 <form onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label className="block text-sm font-medium text-gray-700">Username</label>
-                        <input type="text" id="userName" name="username" className="mt-1 px-4 py-2 w-full border rounded-md focus:ring focus:ring-indigo-300"/>
+                        <input type="text" id="userName" name="username" placeholder="admin" className="mt-1 px-4 py-2 w-full border rounded-md focus:ring focus:ring-indigo-300"/>
                     </div>
                     <div className="mb-4">
                         <label className="block text-sm font-medium text-gray-700">Password</label>
