@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../utils/auth";
 
-const LoginPage = ()=>{
+export default function LoginPage(){
     const navigate = useNavigate();
     const admin = {
         username : 'admin',
@@ -58,5 +58,3 @@ const LoginPage = ()=>{
         </div>
     )
 }
-
-export default LoginPage;
