@@ -7,8 +7,7 @@ const auth = {
     storeAuthCredential: (token)=>{
         return Cookies.set('token', token);
     },
-    logout: (navigate)=>{
-        navigate('/login')
+    logout: ()=>{
         return Cookies.remove('token');
     }
 }

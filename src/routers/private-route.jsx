@@ -1,10 +1,14 @@
 import logo from '../assets/logo.png';
-import { Link, Navigate, Outlet } from "react-router-dom";
+import { Link, Navigate, Outlet, useNavigate } from "react-router-dom";
 import LoginPage from '../Components/pages/login-page';
 import auth from '../utils/auth';
 
 function PrivateRoute() {
-    let userName = 'Admin';
+    const navigate = useNavigate();
+    const logout = ()=>{
+        auth.logout();
+        navigate('/');
+    }
     // true jika sudah login
     if(auth.isAuthenticated()){
         return (
@@ -13,7 +17,10 @@ function PrivateRoute() {
                     <header className="flex justify-between items-center bg-primary-blue p-4 text-secondary-gray h-[67.33px] min-w-[270px]">
                         <div className="flex flex-col sm:flex-row justify-between sm:w-11/12 lg:w-full">
                             <img className="w-32 ml-4" src={logo} alt="logo" />
-                            <p className="sm:text-xl">{userName}</p>
+                            <div className='flex items-center'>
+                                <p className="sm:text-xl ml-8 mr-2">admin</p>
+                                <button onClick={logout} title='keluar' className='hover:text-hover-blue lg:mx-2'><i class="ri-logout-circle-r-line text-xl"></i></button>
+                            </div>
                         </div>
                         <div className="lg:hidden">
                             <button id="open-sidebar" className="text-3xl"><i className="ri-menu-line"></i></button>
@@ -80,11 +87,7 @@ function PrivateRoute() {
                 </div>
             </>
         );
-    }else{
-        <div className='text-4xl'>
-            <p>Page Not Found, please Log in...</p>
-        </div>
     }
-    
 }
+
 export default PrivateRoute;

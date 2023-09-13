@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png';
-import { Link, Navigate, Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import auth from '../utils/auth';
 
 function PersonalRoute() {
