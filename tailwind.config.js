@@ -6,6 +6,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'login': "url('src/assets/loginbg.jpg')",
+      },
+      
       transitionProperty: {
         'display': 'display',
       },
