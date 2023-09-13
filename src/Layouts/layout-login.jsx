@@ -1,5 +1,5 @@
-import { Link, Outlet } from "react-router-dom";
 
+import { Link, Outlet } from "react-router-dom";
 const LayoutLogin = ()=>{
     return(
         <div className="bg-primary-gray flex items-center justify-center h-screen">
@@ -24,7 +24,7 @@ const LayoutLogin = ()=>{
                     <a href="#" className="text-primary-blue font-semibold hover:underline">Forgot Password?</a>
                     </div>
                     <button type="button" className="w-full bg-secondary-blue text-white py-2 rounded-md hover:bg-hover-blue">
-                    <Link to='/dashboard'>Log In</Link>
+                    <Link to=''>Log In</Link>
                     </button>
                     <div className="my-4 text-center">
                     <span>Not an admin?
