@@ -1,6 +1,6 @@
 import React from "react";
 
-const PesanKamarPage = () => {
+export default function PesanKamarPage(){
     return (
         <main className="bg-primary-gray grow overflow-y-auto h-[calc(100vh-67.33px)]">
             <h1 className="m-4 text-2xl font-semibold">Pesan Kamar</h1>
@@ -120,5 +120,3 @@ const PesanKamarPage = () => {
         </main>
     )
 }
-
-export default PesanKamarPage;

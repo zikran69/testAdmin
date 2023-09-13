@@ -1,4 +1,4 @@
-const ProfilePage = ()=>{
+export default function ProfilePage(){
     return(
         <div className="w-full">
             <main className="bg-primary-gray grow overflow-y-auto h-[calc(100vh-67.33px)]">
@@ -49,5 +49,3 @@ const ProfilePage = ()=>{
         </div>
     )
 }
-
-export default ProfilePage;

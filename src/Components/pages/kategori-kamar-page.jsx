@@ -4,7 +4,7 @@ import Search from "../file-bahe/Search.jsx";
 import Tambah from "../file-bahe/Tambah.jsx";
 import TabelKategori from "../file-bahe/TabelKategori.jsx";
 
-const KategoiKamarPage = (props)=>{
+export default function KategoiKamarPage(props){
     const [storage, setStorage] = useState(kategori);
     // const [postKategori, setPostKategori] = useState(storage);
     // let dataKategori = storage;
@@ -45,5 +45,3 @@ const KategoiKamarPage = (props)=>{
     </div>
     )
 }   
-
-export default KategoiKamarPage;
