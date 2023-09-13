@@ -55,10 +55,10 @@ function PrivateRoute() {
                                         <Link to='/Kategori-kamar' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>Kategori Kamar</Link>
                                     </div>
                                     <div className="pl-6">
-                                        <Link to='/' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>Lantai Kamar</Link>
+                                        <Link to='/lantai-kamar' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>Lantai Kamar</Link>
                                     </div>
                                     <div className="pl-6">
-                                        <Link to='/' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>List Kamar</Link>
+                                        <Link to='/list-kamar' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>List Kamar</Link>
                                     </div>
                                 </details>
                                 <details open className="space-y-2">
@@ -76,7 +76,7 @@ function PrivateRoute() {
                                 </details>
                             </div>
                             <div className="mt-2">
-                                <Link to='/' className="hover:text-secondary-blue"><i className="ri-folder-2-line mr-2"></i>Laporan</Link>
+                                <Link to='/laporan' className="hover:text-secondary-blue"><i className="ri-folder-2-line mr-2"></i>Laporan</Link>
                             </div>
                         </aside>
                         <button id="close-sidebar" className="absolute top-[-3px] left-[260px] text-6xl hidden"><i
