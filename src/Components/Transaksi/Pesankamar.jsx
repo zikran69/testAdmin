@@ -8,7 +8,7 @@ const PesanKamar = () => {
                 <form>
                     <div class="p-4 flex gap-4 flex-wrap">
                         <div class="flex flex-col">
-                            <label class="text-zinc-800 text-secondary-gray" for="kategori">Kategori</label>
+                            <label class="text-zinc-800 " for="kategori">Kategori</label>
                             <select name="kategori" id=""
                                 class="focus:outline-secondary-gray outline-secondary-gray p-2.5 rounded-full border border-gray-300 text-secondary-gray">
                                 <option>--pilih kategori--</option>

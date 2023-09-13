@@ -1,7 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import logo from '../assets/logo.png'
 
-function LayoutContent() {
+function PrivateRoute() {
     let userName = 'Admin';
     return (
         <>
@@ -75,4 +75,4 @@ function LayoutContent() {
         </>
     );
 }
-export default LayoutContent;
+export default PrivateRoute;
