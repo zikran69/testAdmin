@@ -1,6 +1,6 @@
 export default function Dasboard(){
     return(
-        <div>
+        <div className="w-full">
             <main className="bg-primary-gray grow overflow-y-auto">
             <div className="p-4 h-[calc(100vh-67.33px)]">
             <div>

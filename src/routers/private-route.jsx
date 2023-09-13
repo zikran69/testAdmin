@@ -41,7 +41,7 @@ function PrivateRoute() {
                                         className="ri-settings-5-fill mr-2"></i>Pengaturan<i className="ri-arrow-drop-down-line"></i>
                                     </summary>
                                     <div className="pl-6">
-                                        <Link to='/' className="hover:text-secondary-blue"><i className="ri-user-settings-line mr-2"></i>Administrator</Link>
+                                        <Link to='/administrator' className="hover:text-secondary-blue"><i className="ri-user-settings-line mr-2"></i>Administrator</Link>
                                     </div>
                                     <div className="pl-6">
                                         <Link to='/profile' className="hover:text-secondary-blue"><i className="ri-profile-line mr-2"></i>profile hotel</Link>
@@ -68,10 +68,10 @@ function PrivateRoute() {
                                         <Link to='/pesan-kamar' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Pesan Kamar</Link>
                                     </div>
                                     <div className="pl-6">
-                                        <Link to='/' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Check In</Link>
+                                        <Link to='/checkin-kamar' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Check In</Link>
                                     </div>
                                     <div className="pl-6">
-                                        <Link to='/' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Check Out</Link>
+                                        <Link to='/checkout-kamar' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Check Out</Link>
                                     </div>
                                 </details>
                             </div>
