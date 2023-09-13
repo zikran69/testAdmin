@@ -1,6 +1,6 @@
 import { Routes,Route } from "react-router-dom";
 
-import ProtectedRoute from "./protected-routes";
+import ProtectedRoute from "./protected-route";
 import LoginPage from "../Components/pages/login-page";
 
 import PrivateRoute from "./private-route";
@@ -11,12 +11,12 @@ export default function Router(){
     return(
         <Routes>
             <Route>
-                {/* <Route path="/" element={<PrivateRoute />}>
-                    <Route index element={<Dashboard />} />
-                    <Route path="/kategori" element={<Kategori />} />
-                </Route> */}
                 <Route path="/" element={<ProtectedRoute />}>
                     <Route path="/login" element={<LoginPage />} />
+                </Route>
+                <Route path="/" element={<PrivateRoute />}>
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/kategori" element={<Kategori />} />
                 </Route>
             </Route>
         </Routes>
