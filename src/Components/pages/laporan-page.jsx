@@ -29,71 +29,60 @@ export default function LaporanPage(){
                             <tr>
                                 <td className="p-4 border-secondary-gray border border-b-2 border-opacity-20"  data-cell="">1</td>
                                 <td className="p-4 border-secondary-gray border border-b-2 border-opacity-20"  data-cell="">
-                                    <table>
-                                        <tr>
-                                            <td>NIK</td>
-                                            <td>:</td>
-                                            <td>123</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nama</td>
-                                            <td>:</td>
-                                            <td>test</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Telp</td>
-                                            <td>:</td>
-                                            <td>08123......</td>
-                                        </tr>
-                                    </table>
+                                    <div>
+                                        <div className="pb-1">
+                                            <span className="mr-2">NIK:</span>
+                                            <span>123</span>
+                                        </div>
+                                        <div className="pb-1">
+                                            <span className="mr-2">Nama:</span>
+                                            <span>test</span>
+                                        </div>
+                                        <div className="pb-1">
+                                            <span className="mr-2">Telp:</span>
+                                            <span>08123......</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td className="p-4 border-secondary-gray border border-b-2 border-opacity-20"  data-cell="">
-                                    <table>
-                                        <tr>
-                                            <td>Id Transaksi</td>
-                                            <td>:</td>
-                                            <td>123</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Kategori</td>
-                                            <td>:</td>
-                                            <td>test</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Nomor Kamar</td>
-                                            <td>:</td>
-                                            <td>....</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Harga Kamar</td>
-                                            <td>:</td>
-                                            <td>....</td>
-                                        </tr>
-                                    </table>
+                                    <div>
+                                        <div className="pb-1">
+                                            <span className="mr-2">Id Transaksi:</span>
+                                            <span>123</span>
+                                        </div>
+                                        <div className="pb-1">
+                                            <span className="mr-2">Kategori:</span>
+                                            <span>test</span>
+                                        </div>
+                                        <div className="pb-1">
+                                            <span className="mr-2">Nomor Kamar:</span>
+                                            <span>....</span>
+                                        </div>
+                                        <div className="pb-1">
+                                            <span className="mr-2">Harga Kamar:</span>
+                                            <span>......</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td className="p-4 border-secondary-gray border border-b-2 border-opacity-20"  data-cell="">
-                                    <table>
-                                        <tr>
-                                            <td>CheckIn</td>
-                                            <td>:</td>
-                                            <td>...</td>
-                                        </tr>
-                                        <tr>
-                                            <td>CheckOUt</td>
-                                            <td>:</td>
-                                            <td>...</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Lama</td>
-                                            <td>:</td>
-                                            <td>....</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Total Bayar</td>
-                                            <td>:</td>
-                                            <td>....</td>
-                                        </tr>
-                                    </table>
+                                    <div>
+                                        <div className="pb-1">
+                                            <span className="mr-2">CheckIn:</span>
+                                            <span>...</span>
+                                        </div>
+                                        <div className="pb-1">
+                                            <span className="mr-2">CheckOUt:</span>
+                                            <span>...</span>
+                                        </div>
+                                        <div className="pb-1">
+                                            <span className="mr-2">Durasi:</span>
+                                            <span>....</span>
+                                        </div>
+                                        <div className="pb-1">
+                                            <span className="mr-2">Total Bayar:</span>
+                                            <span>......</span>
+                                        </div>
+                                    </div>
                                 </td>
                                 <td className="p-4 border-secondary-gray border border-b-2 border-opacity-20">
                                     <button type="button" title="detail" className="mr-1 py-1 px-5 bg-green-400 rounded-md hover:bg-hover-green"><i className="ri-search-line text-white"></i></button>
