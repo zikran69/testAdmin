@@ -34,7 +34,7 @@ export default function LoginPage(){
     
     if(bgLogin){
         return(
-            <div className="flex items-center justify-center h-screen bg-[url('./src/assets/login.jpg')] bg-cover">
+            <div className={bgLogin}>
                 {
                     <div className="backdrop-blur-sm bg-white/20 p-6 rounded-xl shadow-xl w-[400px] sm:mx-3">
                     <h1 className="text-3xl font-semibold mb-4 text-center font-roboto">
