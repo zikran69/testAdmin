@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "lantai": "V",
+        "keterangan": "Bahan kayu berkualitas",
+        "status": "perbaikan",
+        "opsi": false
+    },
+    {
+        "id": "2",
+        "lantai": "IV",
+        "keterangan": "Bahan baja ringan",
+        "status": "tersedia",
+        "opsi": true
+    },
+    {
+        "id": "3",
+        "lantai": "II",
+        "keterangan": "Bahan kusen murah",
+        "status": "habis",
+        "opsi": false
+    },
+    {
+        "id": "4",
+        "lantai": "X",
+        "keterangan": "Bahan karet keras",
+        "status": "tersedia",
+        "opsi": true
+    }
+]

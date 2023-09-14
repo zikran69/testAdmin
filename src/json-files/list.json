@@ -1,0 +1,29 @@
+[
+    {
+        "id": "1",
+        "nomorKamar": "IIV",
+        "lantai": "II",
+        "kategori": "Junior Suite",
+        "harga": 1000,
+        "status": "tersedia",
+        "opsi": true
+    },
+    {
+        "id": "2",
+        "nomorKamar": "IV",
+        "lantai": "III",
+        "kategori": "Executive Suite",
+        "harga": 2000,
+        "status": "penuh",
+        "opsi": false
+    },
+    {
+        "id": "3",
+        "nomorKamar": "IX",
+        "lantai": "VI",
+        "kategori": "Super Deluxe",
+        "harga": 3000,
+        "status": "penuh",
+        "opsi": false
+    }
+]

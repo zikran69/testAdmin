@@ -1,10 +1,8 @@
 import React, { useState } from "react";
-import kategori from '../../kategori.json'
-import Search from "../file-bahe/Search.jsx";
-import Tambah from "../file-bahe/Tambah.jsx";
-import TabelKategori from "../file-bahe/TabelKategori.jsx";
+import kategori from '../json-files/kategori.json'
+import TabelKategori from "../Components/tabel-kategori";
 
-export default function ListKamarPage(){
+export default function KategoiKamarPage(props){
     const [storage, setStorage] = useState(kategori);
     // const [postKategori, setPostKategori] = useState(storage);
     // let dataKategori = storage;
@@ -33,15 +31,15 @@ export default function ListKamarPage(){
     return(
     <div className="w-full">
         <div className="bg-primary-gray grow overflow-y-auto h-[calc(100vh-67.33px)]">
-        <h1 className="p-4 font-raleway text-2xl font-semibold">List Kamar</h1>
+        <h1 className="p-4 font-raleway text-2xl font-semibold">Kategori Kamar</h1>
         <form className="font-roboto px-4 mx-4 border rounded-lg bg-white max-md:text-sm overflow-auto">
-            <div className="grid gap-5 place-items-start sm:flex justify-between m-4 ">
+            {/* <div className="grid gap-5 place-items-start sm:flex justify-between m-4 ">
                 <Tambah dataKategori={storage} menambahKategori={dataTambahKategori} />
                 <Search dataKategori={storage} mencariKategori={dataMencari} />
-            </div>
+            </div> */}
             <TabelKategori dataKategori={storage} menghapus={deleteKategori}/>
         </form>
     </div>
     </div>
     )
-}
+}   
