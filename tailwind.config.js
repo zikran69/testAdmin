@@ -5,11 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      backgroundImage: {
-        'login': "url('./src/assets/loginbg.jpg')",
-      },
-      
+    extend: {      
       transitionProperty: {
         'display': 'display',
       },
