@@ -189,7 +189,7 @@ export default function CheckoutKamarpage(){
                                         data-cell="tanggal-checkin">2023-08-01</td>
                                     <td className="md:before:content-none before:capitalize sm:before:content-[attr(data-cell)':'] before:block before:font-semibold flex sm:justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10 md:text-center"
                                         data-cell="opsi">
-                                        <div className="w-[190px]">
+                                        <div className="min-w-[190px] w-full flex justify-center">
                                             <button title="detail" className="mr-1 px-5 py-1 bg-green-400 hover:bg-hover-green rounded-md"> <i
                                                     className="ri-search-line text-white"> </i></button>
                                             <button type="button" title="hapus"
@@ -219,7 +219,7 @@ export default function CheckoutKamarpage(){
                                         data-cell="tanggal-checkin">2023-08-02</td>
                                     <td className="md:before:content-none before:capitalize sm:before:content-[attr(data-cell)':'] before:block before:font-semibold flex sm:justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10 md:text-center"
                                         data-cell="opsi">
-                                        <div className="w-[190px]">
+                                        <div className="min-w-[190px] w-full flex justify-center">
                                             <button title="detail" className="mr-1 px-5 py-1 bg-green-400 hover:bg-hover-green rounded-md"> <i
                                                     className="ri-search-line text-white"> </i></button>
                                             <button type="button" title="hapus"
@@ -249,7 +249,7 @@ export default function CheckoutKamarpage(){
                                         data-cell="tanggal-checkin">2023-08-03</td>
                                     <td className="md:before:content-none before:capitalize sm:before:content-[attr(data-cell)':'] before:block before:font-semibold flex sm:justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10 md:text-center"
                                         data-cell="opsi">
-                                        <div className="w-[190px]">
+                                        <div className="min-w-[190px] w-full flex justify-center">
                                             <button title="detail" className="mr-1 px-5 py-1 bg-green-400 hover:bg-hover-green rounded-md"> <i
                                                     className="ri-search-line text-white"> </i></button>
                                             <button type="button" title="hapus"
@@ -279,7 +279,7 @@ export default function CheckoutKamarpage(){
                                         data-cell="tanggal-checkin">2023-08-04</td>
                                     <td className="md:before:content-none before:capitalize sm:before:content-[attr(data-cell)':'] before:block before:font-semibold flex sm:justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10 md:text-center"
                                         data-cell="opsi">
-                                        <div className="w-[190px]">
+                                        <div className="min-w-[190px] w-full flex justify-center">
                                             <button title="detail" className="mr-1 px-5 py-1 bg-green-400 hover:bg-hover-green rounded-md"> <i
                                                     className="ri-search-line text-white"> </i></button>
                                             <button type="button" title="hapus"
@@ -309,7 +309,7 @@ export default function CheckoutKamarpage(){
                                         data-cell="tanggal-checkin">2023-08-05</td>
                                     <td className="md:before:content-none before:capitalize sm:before:content-[attr(data-cell)':'] before:block before:font-semibold flex sm:justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10 md:text-center"
                                         data-cell="opsi">
-                                        <div className="w-[190px]">
+                                        <div className="min-w-[190px] w-full flex justify-center">
                                             <button title="detail" className="mr-1 px-5 py-1 bg-green-400 hover:bg-hover-green rounded-md"> <i
                                                     className="ri-search-line text-white"> </i></button>
                                             <button type="button" title="hapus"

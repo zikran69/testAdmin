@@ -16,7 +16,7 @@ export default function LaporanPage(){
                         </div>
                     </div>
                     <table className="mb-4 border-collapse  rounded-lg text-sm text-left text-gray-500 w-full">
-                        <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+                        <thead className="text-xs text-gray-700 uppercase bg-gray-50"ali>
                             <tr>
                                 <th className="border border-b-2 border-opacity-20 border-secondary-gray p-4 text-left">No</th>
                                 <th className="border border-b-2 border-opacity-20 border-secondary-gray p-4 text-left">Customer</th>
