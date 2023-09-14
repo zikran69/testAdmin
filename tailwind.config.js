@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'login': "url('src/assets/loginbg.jpg')",
+        'login': "url('./src/assets/loginbg.jpg')",
       },
       
       transitionProperty: {

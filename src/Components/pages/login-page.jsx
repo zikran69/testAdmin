@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import auth from "../../utils/auth";
 
 export default function LoginPage(){
