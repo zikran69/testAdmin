@@ -1,4 +1,4 @@
 
     {
-        "image": "flex items-center justify-center h-screen bg-[url('./src/assets/login.jpg')] bg-cover"
+        "image": "flex items-center justify-center h-screen bg-blue-200 bg-cover"
     }
