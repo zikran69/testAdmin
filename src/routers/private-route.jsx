@@ -22,11 +22,11 @@ function PrivateRoute() {
                             </div>
                         </div>
                         <div className="lg:hidden">
-                            <button id="open-sidebar" className="text-3xl"><i className="ri-menu-line"></i></button>
+                            <button id="open-sidebar" className="text-3xl">
+                            <i className="ri-menu-line"></i></button>
                         </div>
                     </header>
                     <div id="container" className="flex h-[calc(100vh-67.33px)] min-w-[270px]">
-                        <div id="sidebar-overlay" className="hidden lg:hidden bg-black h-screen w-screen absolute top-0 left-0 opacity-90" />
                         <div id="sidebar-overlay" className="hidden lg:hidden bg-black h-screen w-screen absolute top-0 left-0 opacity-90">
                         </div>
                         <aside id="sidebar"
