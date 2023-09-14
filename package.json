@@ -1,5 +1,4 @@
 {
-  "homepage": "https://github.com/bahe-eman/dashboard-admin-ver.2",
   "name": "my-project",
   "private": true,
   "version": "0.0.0",
@@ -10,7 +9,12 @@
     "deploy": "gh-pages -d build",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d deploy",
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "js-cookie": "^3.0.5",

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../utils/auth";
 
-const LoginPage = ()=>{
+export default function LoginPage(){
     const navigate = useNavigate();
     const admin = {
         username : 'admin',
@@ -24,8 +24,8 @@ const LoginPage = ()=>{
     }
     
     return(
-        <div className="bg-primary-gray flex items-center justify-center h-screen">
-            <div className="bg-white p-6 rounded-xl shadow-xl w-[400px] sm:mx-3">
+        <div className="flex items-center justify-center h-screen bg-login bg-cover">
+            <div className="backdrop-blur-sm bg-white/20 p-6 rounded-xl shadow-xl w-[400px] sm:mx-3">
                 <h1 className="text-3xl font-semibold mb-4 text-center font-roboto">
                     Log In
                 </h1>
@@ -58,5 +58,3 @@ const LoginPage = ()=>{
         </div>
     )
 }
-
-export default LoginPage;

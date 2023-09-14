@@ -22,11 +22,11 @@ function PrivateRoute() {
                             </div>
                         </div>
                         <div className="lg:hidden">
-                            <button id="open-sidebar" className="text-3xl"><i className="ri-menu-line"></i></button>
+                            <button id="open-sidebar" className="text-3xl">
+                            <i className="ri-menu-line"></i></button>
                         </div>
                     </header>
                     <div id="container" className="flex h-[calc(100vh-67.33px)] min-w-[270px]">
-                        <div id="sidebar-overlay" className="hidden lg:hidden bg-black h-screen w-screen absolute top-0 left-0 opacity-90" />
                         <div id="sidebar-overlay" className="hidden lg:hidden bg-black h-screen w-screen absolute top-0 left-0 opacity-90">
                         </div>
                         <aside id="sidebar"
@@ -41,7 +41,7 @@ function PrivateRoute() {
                                         className="ri-settings-5-fill mr-2"></i>Pengaturan<i className="ri-arrow-drop-down-line"></i>
                                     </summary>
                                     <div className="pl-6">
-                                        <Link to='/' className="hover:text-secondary-blue"><i className="ri-user-settings-line mr-2"></i>Administrator</Link>
+                                        <Link to='/administrator' className="hover:text-secondary-blue"><i className="ri-user-settings-line mr-2"></i>Administrator</Link>
                                     </div>
                                     <div className="pl-6">
                                         <Link to='/profile' className="hover:text-secondary-blue"><i className="ri-profile-line mr-2"></i>profile hotel</Link>
@@ -55,10 +55,10 @@ function PrivateRoute() {
                                         <Link to='/Kategori-kamar' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>Kategori Kamar</Link>
                                     </div>
                                     <div className="pl-6">
-                                        <Link to='/' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>Lantai Kamar</Link>
+                                        <Link to='/lantai-kamar' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>Lantai Kamar</Link>
                                     </div>
                                     <div className="pl-6">
-                                        <Link to='/' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>List Kamar</Link>
+                                        <Link to='/list-kamar' className="hover:text-secondary-blue"><i className="ri-hotel-bed-line mr-2"></i>List Kamar</Link>
                                     </div>
                                 </details>
                                 <details open className="space-y-2">
@@ -68,15 +68,15 @@ function PrivateRoute() {
                                         <Link to='/pesan-kamar' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Pesan Kamar</Link>
                                     </div>
                                     <div className="pl-6">
-                                        <Link to='/' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Check In</Link>
+                                        <Link to='/checkin-kamar' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Check In</Link>
                                     </div>
                                     <div className="pl-6">
-                                        <Link to='/' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Check Out</Link>
+                                        <Link to='/checkout-kamar' className="hover:text-secondary-blue"><i className="ri-notification-3-fill mr-2"></i>Check Out</Link>
                                     </div>
                                 </details>
                             </div>
                             <div className="mt-2">
-                                <Link to='/' className="hover:text-secondary-blue"><i className="ri-folder-2-line mr-2"></i>Laporan</Link>
+                                <Link to='/laporan' className="hover:text-secondary-blue"><i className="ri-folder-2-line mr-2"></i>Laporan</Link>
                             </div>
                         </aside>
                         <button id="close-sidebar" className="absolute top-[-3px] left-[260px] text-6xl hidden"><i
