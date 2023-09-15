@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import kategori from '../../kategori.json'
-import Search from "../file-bahe/Search.jsx";
-import Tambah from "../file-bahe/Tambah.jsx";
-import TabelKategori from "../file-bahe/TabelKategori.jsx";
+import db_hotel from '../db_hotel.json'
+import LantaiTable from "../Components/lantai-table";
 
-export default function ListKamarPage(){
-    const [storage, setStorage] = useState(kategori);
+export default function LantaiKamarPage(){
+    const [database, setStorage] = useState(db_hotel);
     // const [postKategori, setPostKategori] = useState(storage);
     // let dataKategori = storage;
 
@@ -33,13 +31,13 @@ export default function ListKamarPage(){
     return(
     <div className="w-full">
         <div className="bg-primary-gray grow overflow-y-auto h-[calc(100vh-67.33px)]">
-        <h1 className="p-4 font-raleway text-2xl font-semibold">List Kamar</h1>
+        <h1 className="p-4 font-raleway text-2xl font-semibold">Lantai Kamar</h1>
         <form className="font-roboto px-4 mx-4 border rounded-lg bg-white max-md:text-sm overflow-auto">
             <div className="grid gap-5 place-items-start sm:flex justify-between m-4 ">
-                <Tambah dataKategori={storage} menambahKategori={dataTambahKategori} />
-                <Search dataKategori={storage} mencariKategori={dataMencari} />
+                {/* <Tambah dataKategori={storage} menambahKategori={dataTambahKategori} />
+                <Search dataKategori={storage} mencariKategori={dataMencari} /> */}
             </div>
-            <TabelKategori dataKategori={storage} menghapus={deleteKategori}/>
+            <LantaiTable database={database} menghapus={deleteKategori}/>
         </form>
     </div>
     </div>

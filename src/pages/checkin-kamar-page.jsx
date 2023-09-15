@@ -139,33 +139,33 @@ export default function CheckinKamarPage(){
                         </div>
                     </div>
                     <table className="border-collapse  rounded-lg text-sm text-left text-gray-500 bg-white w-full">
-                        <thead className="text-xs text-gray-700 uppercase bg-gray-50">
+                        <thead className="text-xs text-gray-700 bg-gray-50 uppercase">
                             <tr className="odd:bg-zinc-400 odd:bg-opacity-10 md:odd:bg-transparent">
                                 <th
-                                    className="hidden md:table-cell capitalize border-2 border-opacity-10 border-secondary-gray p-2 text-left">
+                                    className="hidden md:table-cell border-2 border-opacity-10 border-secondary-gray p-2 text-left">
                                     no
                                 </th>
                                 <th
-                                    className="hidden md:table-cell capitalize border-2 border-opacity-10 border-secondary-gray p-2 text-left">
+                                    className="hidden md:table-cell border-2 border-opacity-10 border-secondary-gray p-2 text-left">
                                     id
                                     registrasi</th>
                                 <th
-                                    className="hidden md:table-cell capitalize border-2 border-opacity-10 border-secondary-gray p-2 text-left">
+                                    className="hidden md:table-cell border-2 border-opacity-10 border-secondary-gray p-2 text-left">
                                     nik
                                 </th>
                                 <th
-                                    className="hidden md:table-cell capitalize border-2 border-opacity-10 border-secondary-gray p-2 text-left">
+                                    className="hidden md:table-cell border-2 border-opacity-10 border-secondary-gray p-2 text-left">
                                     nama
                                 </th>
                                 <th
-                                    className="hidden md:table-cell capitalize border-2 border-opacity-10 border-secondary-gray p-2 text-left">
+                                    className="hidden md:table-cell border-2 border-opacity-10 border-secondary-gray p-2 text-left">
                                     no
                                     Kamar</th>
                                 <th
-                                    className="hidden md:table-cell capitalize border-2 border-opacity-10 border-secondary-gray p-2 text-left">
+                                    className="hidden md:table-cell border-2 border-opacity-10 border-secondary-gray p-2 text-left">
                                     tanggal check in</th>
                                 <th
-                                    className="hidden md:table-cell capitalize border-2 border-opacity-10 border-secondary-gray p-2 text-left">
+                                    className="hidden md:table-cell border-2 border-opacity-10 border-secondary-gray p-2 text-left">
                                     opsi
                                 </th>
                             </tr>
