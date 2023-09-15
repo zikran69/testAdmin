@@ -3,17 +3,17 @@ import { Routes,Route } from "react-router-dom";
 import ProtectedRoute from "./protected-route";
 import PrivateRoute from "./private-route";
 
-import LoginPage from "../Components/pages/login-page";
-import DashboardPage from "../Components/pages/dashboard-page";
-import AdministratorPage from "../Components/pages/administrator-page";
-import ProfilePage from "../Components/pages/profile-page";
-import KategoriKamarPage from "../Components/pages/kategori-kamar-page";
-import LantaiKamarPage from "../Components/pages/lantai-kamar-page";
-import ListKamarPage from "../Components/pages/list-kamar-page";
-import PesanKamarPage from "../Components/pages/pesan-kamar-page";
-import CheckinKamarPage from "../Components/pages/checkin-kamar-page";
-import CheckoutKamarpage from "../Components/pages/checkout-kamar-page";
-import LaporanPage from "../Components/pages/laporan-page";
+import LoginPage from "../pages/login-page";
+import DashboardPage from "../pages/dashboard-page";
+import AdministratorPage from "../pages/administrator-page";
+import ProfilePage from "../pages/profile-page";
+import KategoriKamarPage from "../pages/kategori-kamar-page";
+import LantaiKamarPage from "../pages/lantai-kamar-page";
+import ListKamarPage from "../pages/list-kamar-page";
+import PesanKamarPage from "../pages/pesan-kamar-page";
+import CheckinKamarPage from "../pages/checkin-kamar-page";
+import CheckoutKamarpage from "../pages/checkout-kamar-page";
+import LaporanPage from "../pages/laporan-page";
 
 export default function Router(){
     return(
