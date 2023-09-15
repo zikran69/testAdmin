@@ -1,0 +1,29 @@
+[
+    {
+        "id" : 1,
+        "kategori" : "Junior Suite",
+        "nomorKamar": "I - IX",
+        "fasilitas" : "ac, tv",
+        "harga" : 1000,
+        "status" : "tersedia",
+        "keterangan": true
+    },
+    {
+        "id" : 2,
+        "kategori" : "Executive Suite",
+        "nomorKamar": "X - XII",
+        "fasilitas" : "ac, tv, spa",
+        "harga" : 2000,
+        "status" : "tersedia",
+        "keterangan": true
+    },
+    {
+        "id" : 3,
+        "kategori" : "Super Deluxe",
+        "nomorKamar": "X - XII",
+        "fasilitas" : "ac, tv, bar, dinner",
+        "harga" : 3000,
+        "status" : "full",
+        "keterangan": false
+    }
+]

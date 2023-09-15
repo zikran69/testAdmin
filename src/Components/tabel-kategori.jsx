@@ -1,10 +1,10 @@
 
 const TabelKategori = (props)=>{
-    let dataKategori;
+    let database;
     let hapus;
-    if(props.dataKategori == undefined){
-        dataKategori = [];
-    }else dataKategori = props.dataKategori;
+    if(props.database == undefined){
+        database = [];
+    }else database = props.database;
 
     const opsi = (el)=>{
         const target = el.target;
@@ -15,14 +15,14 @@ const TabelKategori = (props)=>{
             if(target.title == 'hapus'){
                 tr = target.parentElement.parentElement.parentElement;
             }else tr = target.parentElement.parentElement.parentElement.parentElement;
-            dataKategori.splice([tr.children[0].innerText-1], 1);
+            database.splice([tr.children[0].innerText-1], 1);
             console.log([tr.children[0].innerText-1]);
-            hapus = dataKategori;
+            hapus = database;
             props.menghapus(hapus);
         };
     }
 
-    if(dataKategori.length > 0 && dataKategori != undefined){
+    if(database.length > 0 && database != undefined){
         return(
         <>
             <table onClick={opsi} id="tabel" className="mb-4 border-collapse  rounded-lg text-sm text-left text-gray-500 w-full">
@@ -38,7 +38,7 @@ const TabelKategori = (props)=>{
                 </thead>
                 <tbody>
                     {
-                        dataKategori.map(({id, kategori, harga, fasilitas, status}, index)=>{
+                        database.map(({id, kategori, harga, fasilitas, status}, index)=>{
                             return(
                                 <tr key={id}>
                                     <td  className= "p-4 border-secondary-gray border border-b-2 border-opacity-10">{index+1}</td>
