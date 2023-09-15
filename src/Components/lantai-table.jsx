@@ -1,7 +1,5 @@
-
-const TabelKategori = (props)=>{
+export default function LantaiTable(props){
     let database;
-    let hapus;
     if(props.database == undefined){
         database = [];
     }else database = props.database;
@@ -15,10 +13,10 @@ const TabelKategori = (props)=>{
             if(target.title == 'hapus'){
                 tr = target.parentElement.parentElement.parentElement;
             }else tr = target.parentElement.parentElement.parentElement.parentElement;
-            database.splice([tr.children[0].innerText-1], 1);
-            console.log([tr.children[0].innerText-1]);
-            hapus = database;
-            props.menghapus(hapus);
+            // database.splice([tr.children[0].innerText-1], 1);
+            // console.log([tr.children[0].innerText-1]);
+            // hapus = lantai;
+            // props.menghapus(hapus);
         };
     }
 
@@ -29,22 +27,20 @@ const TabelKategori = (props)=>{
                 <thead className="text-xs text-gray-700 uppercase bg-gray-50">
                     <tr>
                         <th className="border border-b-2 border-opacity-10 border-secondary-blue p-4 text-left">No</th>
-                        <th className="border border-b-2 border-opacity-10 border-secondary-blue p-4 text-left">Kategori</th>
-                        <th className="border border-b-2 border-opacity-10 border-secondary-blue p-4 text-left">Harga</th>
-                        <th className="border border-b-2 border-opacity-10 border-secondary-blue p-4 text-left min-w-[250px]">Fasilitas</th>
+                        <th className="border border-b-2 border-opacity-10 border-secondary-blue p-4 text-left">lantai</th>
+                        <th className="border border-b-2 border-opacity-10 border-secondary-blue p-4 text-left min-w-[300px]">keterangan</th>
                         <th className="border border-b-2 border-opacity-10 border-secondary-blue p-4 text-left">Status</th>
                         <th className="border border-b-2 border-opacity-10 border-secondary-blue p-4 text-left">Opsi</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        database.map(({id, kategori, harga, fasilitas, status}, index)=>{
+                        database.map(({id, lantai, keterangan, status}, index)=>{
                             return(
                                 <tr key={id}>
                                     <td  className= "p-4 border-secondary-gray border border-b-2 border-opacity-10">{index+1}</td>
-                                    <td className= "p-4 border-secondary-gray border border-b-2 border-opacity-10">{kategori}</td>
-                                    <td className= "p-4 border-secondary-gray border border-b-2 border-opacity-10">Rp{harga}</td>
-                                    <td className= "p-4 border-secondary-gray border border-b-2 border-opacity-10">{fasilitas}</td>
+                                    <td className= "p-4 border-secondary-gray border border-b-2 border-opacity-10">{lantai}</td>
+                                    <td className= "p-4 border-secondary-gray border border-b-2 border-opacity-10">{keterangan}</td>
                                     <td className= "p-4 border-secondary-gray border border-b-2 border-opacity-10">{status}</td>
                                     <td className= "p-4 border-secondary-gray border border-b-2 border-opacity-10">
                                         <div className="flex justify-center items-center flex-nowrap">
@@ -63,5 +59,3 @@ const TabelKategori = (props)=>{
         )
     }
 }
-
-export default TabelKategori;

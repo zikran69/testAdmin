@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import kategori from '../json-files/kategori.json';
 import db_hotel from '../db_hotel.json'
-import TabelKategori from "../Components/tabel-kategori";
+import KategoriTable from "../Components/kategori-table";
 
 export default function KategoiKamarPage(props){
     const [database, setStorage] = useState(db_hotel);
@@ -38,7 +37,7 @@ export default function KategoiKamarPage(props){
                 <Tambah dataKategori={storage} menambahKategori={dataTambahKategori} />
                 <Search dataKategori={storage} mencariKategori={dataMencari} />
             </div> */}
-            <TabelKategori database={database} menghapus={deleteKategori}/>
+            <KategoriTable database={database} menghapus={deleteKategori}/>
         </form>
     </div>
     </div>

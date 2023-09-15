@@ -2,28 +2,31 @@
     {
         "id" : 1,
         "kategori" : "Junior Suite",
-        "nomorKamar": "I - IX",
+        "lantai": "I",
+        "nomorKamar": "I - X",
         "fasilitas" : "ac, tv",
         "harga" : 1000,
         "status" : "tersedia",
-        "keterangan": true
+        "keterangan": "Nuansa alam yang dipadukan dengan teknologi modern"
     },
     {
         "id" : 2,
         "kategori" : "Executive Suite",
-        "nomorKamar": "X - XII",
+        "lantai": "II",
+        "nomorKamar": "XX - XIX",
         "fasilitas" : "ac, tv, spa",
         "harga" : 2000,
         "status" : "tersedia",
-        "keterangan": true
+        "keterangan": "Nuansa alam yang dipadukan dengan teknologi modern"
     },
     {
         "id" : 3,
         "kategori" : "Super Deluxe",
-        "nomorKamar": "X - XII",
+        "lantai": "III",
+        "nomorKamar": "XXX - XXXIX",
         "fasilitas" : "ac, tv, bar, dinner",
         "harga" : 3000,
         "status" : "full",
-        "keterangan": false
+        "keterangan": "Nuansa alam yang dipadukan dengan teknologi modern"
     }
 ]

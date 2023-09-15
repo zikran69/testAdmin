@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import lantai from '../json-files/lantai.json';
-import TabelLantai from "../Components/tabel-lantai";
+import db_hotel from '../db_hotel.json'
+import LantaiTable from "../Components/lantai-table";
 
 export default function LantaiKamarPage(){
-    const [storage, setStorage] = useState(lantai);
+    const [database, setStorage] = useState(db_hotel);
     // const [postKategori, setPostKategori] = useState(storage);
     // let dataKategori = storage;
 
@@ -37,7 +37,7 @@ export default function LantaiKamarPage(){
                 {/* <Tambah dataKategori={storage} menambahKategori={dataTambahKategori} />
                 <Search dataKategori={storage} mencariKategori={dataMencari} /> */}
             </div>
-            <TabelLantai lantai={storage} menghapus={deleteKategori}/>
+            <LantaiTable database={database} menghapus={deleteKategori}/>
         </form>
     </div>
     </div>

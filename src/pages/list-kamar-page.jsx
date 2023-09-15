@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import list from '../json-files/list.json';
-import TabelList from '../Components/tabel-list';
+import db_hotel from '../db_hotel.json';
+import TabelList from '../Components/list-table';
 
 export default function ListKamarPage(){
-    const [storage, setStorage] = useState(list);
+    const [database, setStorage] = useState(db_hotel);
     // const [postKategori, setPostKategori] = useState(storage);
     // let dataKategori = storage;
 
@@ -37,7 +37,7 @@ export default function ListKamarPage(){
                 <Tambah dataKategori={storage} menambahKategori={dataTambahKategori} />
                 <Search dataKategori={storage} mencariKategori={dataMencari} />
             </div>*/}
-            <TabelList list={storage} menghapus={deleteKategori}/> 
+            <TabelList database={database} menghapus={deleteKategori}/> 
         </form>
     </div>
     </div>
