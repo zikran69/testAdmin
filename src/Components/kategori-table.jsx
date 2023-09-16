@@ -19,7 +19,7 @@ export default function KategoriTable(props){
             console.log([tr.children[0].innerText-1]);
             hapus = database;
             props.menghapus(hapus);
-        };
+        }
     }
 
     if(database.length > 0 && database != undefined){

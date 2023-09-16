@@ -17,7 +17,7 @@ export default function LantaiTable(props){
             // console.log([tr.children[0].innerText-1]);
             // hapus = lantai;
             // props.menghapus(hapus);
-        };
+        }
     }
 
     if(database.length > 0 && database != undefined){

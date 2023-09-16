@@ -7,28 +7,16 @@ import KategoriSearch from "../Components/kategori-Search";
 
 export default function KategoiKamarPage() {
   const [database, setStorage] = useState(db_hotel);
-  // const [postKategori, setPostKategori] = useState(storage);
-  // let dataKategori = storage;
 
-  // if(dataKategori.length>1){
-  //     document.querySelector('table').classList.remove('hidden');
-  // }
-
-  const dataTambahKategori = (value) => {
+  const tambah = (value) => {
     setStorage(value.map((el) => el));
-    // dataKategori = value;
-    // setPostKategori(value.map(el=>el));
-    // console.log(storage)
   };
 
-  const dataMencari = () => {
+  const cari = () => {
     // setPostKategori(value.map(el=>el));
   };
-  const deleteKategori = (value) => {
+  const hapus = (value) => {
     setStorage(value.map((el) => el));
-    // dataKategori = value;
-    // setPostKategori(value.map(el=>el))
-    // console.log(storage)
   };
 
   return (
@@ -39,10 +27,10 @@ export default function KategoiKamarPage() {
         </h1>
         <form className="font-roboto px-4 mx-4 border rounded-lg bg-white max-md:text-sm overflow-auto">
           <div className="grid gap-5 place-items-start sm:flex justify-between m-4 ">
-            <KategoriTambah database={database} tambah={dataTambahKategori} />
-            <KategoriSearch database={database} mencariKategori={dataMencari} />
+            <KategoriTambah database={database} tambah={tambah} />
+            <KategoriSearch database={database} cari={cari} />
           </div>
-          <KategoriTable database={database} menghapus={deleteKategori} />
+          <KategoriTable database={database} menghapus={hapus} />
         </form>
       </div>
     </div>

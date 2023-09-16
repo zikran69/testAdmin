@@ -1,13 +1,13 @@
-export default function KategoriSearch(props) {
-  const cari = (e) => {
-    const filtered = props.dataKategori.filter((item) =>
-      item.kategori.includes(e.target.value)
+export default function KategoriSearch({ database, cari }) {
+  const searching = (e) => {
+    const db_filter = database.filter((item) =>
+      item.database.includes(e.target.value)
     );
-    props.mencariKategori(filtered);
+    cari(db_filter);
   };
   return (
     <input
-      onChange={cari}
+      onChange={searching}
       type="search"
       placeholder="cari..."
       className="pl-4 pr-2 border border-secondary-gray rounded-[20px] focus:outline-none focus:border-gray-500 order-first sm:order-last text-lg"
