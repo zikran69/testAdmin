@@ -13,7 +13,6 @@ export default function KategoiKamarPage() {
   };
 
   const cari = (value) => {
-    // setPostKategori(value.map(el=>el));
     alert(value);
   };
   const hapus = (value) => {
@@ -29,7 +28,7 @@ export default function KategoiKamarPage() {
         <form className="font-roboto px-4 mx-4 border rounded-lg bg-white max-md:text-sm overflow-auto">
           <div className="grid gap-5 place-items-start sm:flex justify-between m-4 ">
             <KategoriTambah database={database} tambah={tambah} />
-            <KategoriCari cari={cari} />
+            <KategoriCari database={database} cari={cari} />
           </div>
           <KategoriTable database={database} menghapus={hapus} />
         </form>

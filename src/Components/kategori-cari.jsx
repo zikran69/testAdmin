@@ -1,9 +1,9 @@
-export default function KategoriCari({ cari }) {
+export default function KategoriCari({ database, cari }) {
   const searching = () => {
     // const db_filtered = database.filter((item) =>
     //   item.database.includes(e.target.value)
     // );
-    cari("testing...");
+    cari(database);
   };
   return (
     <input
