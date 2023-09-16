@@ -1,9 +1,9 @@
 export default function KategoriSearch({ database, cari }) {
   const searching = (e) => {
-    const db_filter = database.filter((item) =>
+    const db_filtered = database.filter((item) =>
       item.database.includes(e.target.value)
     );
-    cari(db_filter);
+    cari(db_filtered);
   };
   return (
     <input
