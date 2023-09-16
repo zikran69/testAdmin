@@ -3,7 +3,7 @@ import { useState } from "react";
 import db_hotel from "../db_hotel.json";
 import KategoriTable from "../Components/kategori-table";
 import KategoriTambah from "../Components/kategori-tambah";
-import KategoriSearch from "../Components/kategori-Search";
+// import KategoriSearch from "../Components/kategori-Search";
 
 export default function KategoiKamarPage() {
   const [database, setStorage] = useState(db_hotel);
@@ -12,9 +12,9 @@ export default function KategoiKamarPage() {
     setStorage(value.map((el) => el));
   };
 
-  const cari = () => {
-    // setPostKategori(value.map(el=>el));
-  };
+  // const cari = () => {
+  //   setPostKategori(value.map(el=>el));
+  // };
   const hapus = (value) => {
     setStorage(value.map((el) => el));
   };
