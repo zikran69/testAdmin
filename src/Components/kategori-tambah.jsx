@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 export default function KategoriTambah({ database, tambah }) {
   const tambahKategori = () => {
     const db_kategori = database;
@@ -25,3 +26,7 @@ export default function KategoriTambah({ database, tambah }) {
     </button>
   );
 }
+KategoriTambah.propTypes = {
+  database: PropTypes.object,
+  tambah: PropTypes.func,
+};
