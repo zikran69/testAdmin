@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-export default function ListTable({ database }) {
+export default function ListTable({ database, dbHapus }) {
   let db;
   if (database == undefined) {
     db = [];
@@ -18,9 +18,7 @@ export default function ListTable({ database }) {
       } else
         tr = target.parentElement.parentElement.parentElement.parentElement;
       db.splice([tr.children[0].innerText - 1], 1);
-      console.log([tr.children[0].innerText - 1]);
-      //   hapus = db_kategori;
-      //   props.menghapus(hapus);
+      dbHapus(db);
     }
   };
 
@@ -119,4 +117,5 @@ export default function ListTable({ database }) {
 
 ListTable.propTypes = {
   database: PropTypes.array,
+  dbHapus: PropTypes.func,
 };

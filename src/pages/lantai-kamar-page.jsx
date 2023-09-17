@@ -14,8 +14,9 @@ export default function LantaiKamarPage() {
     updateDb(value);
   };
 
-  const deleteKategori = (value) => {
+  const hapus = (value) => {
     setDatabase(value.map((el) => el));
+    updateDb(value);
   };
 
   return (
@@ -29,7 +30,7 @@ export default function LantaiKamarPage() {
             <NewKamar database={database} tambah={tambah} />
             {/* <Search dataKategori={database} mencariKategori={dataMencari} /> */}
           </div>
-          <LantaiTable database={database} menghapus={deleteKategori} />
+          <LantaiTable database={database} dbHapus={hapus} />
         </form>
       </div>
     </div>
