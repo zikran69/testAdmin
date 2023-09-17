@@ -8,7 +8,7 @@ function App() {
   const [db, setDb] = useState(db_hotel);
   const store = {
     database: db,
-    func: (value) => {
+    updateDb: (value) => {
       setDb(value);
     },
   };

@@ -18,7 +18,6 @@ export default function KategoriTable({ database, dbHapus }) {
       } else
         tr = target.parentElement.parentElement.parentElement.parentElement;
       db.splice([tr.children[0].innerText - 1], 1);
-      console.log([tr.children[0].innerText - 1]);
       dbHapus(db);
     }
   };

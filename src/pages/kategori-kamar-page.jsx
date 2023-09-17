@@ -2,18 +2,17 @@ import { useState } from "react";
 import { useContext } from "react";
 import { global } from "../assets/context";
 
-// import db_hotel from "../db_hotel.json";
 import KategoriTable from "../Components/kategori-table";
-import KategoriTambah from "../Components/kategori-tambah";
+import NewKamar from "../Components/new-kamar";
 import KategoriCari from "../Components/kategori-cari";
 
 export default function KategoiKamarPage() {
   const [database, setDatabase] = useState(useContext(global).database);
-  const func = useContext(global).func;
+  const updateDb = useContext(global).updateDb;
 
   const tambah = (value) => {
     setDatabase(value.map((el) => el));
-    func(value);
+    updateDb(value);
   };
 
   const cari = (value) => {
@@ -21,7 +20,7 @@ export default function KategoiKamarPage() {
   };
   const hapus = (value) => {
     setDatabase(value.map((el) => el));
-    func(value);
+    updateDb(value);
   };
 
   return (
@@ -32,7 +31,7 @@ export default function KategoiKamarPage() {
         </h1>
         <form className="font-roboto px-4 mx-4 border rounded-lg bg-white max-md:text-sm overflow-auto">
           <div className="grid gap-5 place-items-start sm:flex justify-between m-4 ">
-            <KategoriTambah database={database} tambah={tambah} />
+            <NewKamar database={database} tambah={tambah} />
             <KategoriCari database={database} cari={cari} />
           </div>
           <KategoriTable database={database} dbHapus={hapus} />
