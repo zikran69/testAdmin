@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 export default function KategoriTambah({ database, tambah }) {
+  const db = database;
   const tambahKategori = () => {
-    const db = database;
     const create = (kategori, harga, fasilitas, status) => {
       const newKategori = {
         id: Math.random() * 321,
