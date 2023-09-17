@@ -6,17 +6,17 @@ import KategoriTambah from "../Components/kategori-tambah";
 import KategoriCari from "../Components/kategori-cari";
 
 export default function KategoiKamarPage() {
-  const [database, setStorage] = useState(db_hotel);
+  const [database, setDatabase] = useState(db_hotel);
 
   const tambah = (value) => {
-    setStorage(value.map((el) => el));
+    setDatabase(value.map((el) => el));
   };
 
   const cari = (value) => {
     alert(value);
   };
   const hapus = (value) => {
-    setStorage(value.map((el) => el));
+    setDatabase(value.map((el) => el));
   };
 
   return (

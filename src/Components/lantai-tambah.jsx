@@ -1,23 +1,22 @@
 import PropTypes from "prop-types";
-export default function KategoriTambah({ database, tambah }) {
-  const tambahKategori = () => {
+export default function LantaiTambah({ database, tambah }) {
+  const lantaiKategori = () => {
     const db = database;
-    const create = (kategori, harga, fasilitas, status) => {
-      const newKategori = {
+    const create = (lantai, keterangan, status) => {
+      const newLantai = {
         id: Math.random() * 321,
-        kategori: kategori,
-        harga: harga,
-        fasilitas: fasilitas,
+        lantai: lantai,
+        keterangan: keterangan,
         status: status,
       };
-      db.push(newKategori);
+      db.push(newLantai);
     };
     create(`${Math.random() * 11}`, 0, "ramdom", "missing");
     tambah(db);
   };
   return (
     <button
-      onClick={tambahKategori}
+      onClick={lantaiKategori}
       id="tambah"
       type="button"
       className="py-1 px-5 bg-blue-400 rounded-md text-sm text-white hover:bg-hover-blue"
@@ -26,7 +25,7 @@ export default function KategoriTambah({ database, tambah }) {
     </button>
   );
 }
-KategoriTambah.propTypes = {
+LantaiTambah.propTypes = {
   database: PropTypes.object,
   tambah: PropTypes.func,
 };
