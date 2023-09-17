@@ -1,10 +1,10 @@
 import PropTypes from "prop-types";
 
 export default function LantaiTable({ database }) {
-  let db_lantai;
+  let db;
   if (database == undefined) {
-    db_lantai = [];
-  } else db_lantai = database;
+    db = [];
+  } else db = database;
 
   const opsi = (el) => {
     const target = el.target;
@@ -26,7 +26,7 @@ export default function LantaiTable({ database }) {
     }
   };
 
-  if (db_lantai.length > 0 && db_lantai != undefined) {
+  if (db.length > 0 && db != undefined) {
     return (
       <>
         <table
@@ -54,7 +54,7 @@ export default function LantaiTable({ database }) {
             </tr>
           </thead>
           <tbody>
-            {db_lantai.map(({ id, lantai, keterangan, status }, index) => {
+            {db.map(({ id, lantai, keterangan, status }, index) => {
               return (
                 <tr key={id}>
                   <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
