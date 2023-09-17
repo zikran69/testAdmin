@@ -10,3 +10,5 @@ Currently, two official plugins are available:
 ### untuk menjalankan vite-react pake npm run dev
 
 ### npm install js-cookie
+
+### npm install --save prop-types
