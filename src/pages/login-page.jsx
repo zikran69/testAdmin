@@ -1,7 +1,7 @@
-import { Link, useNavigate } from "react-router-dom";
-import auth from "../../utils/auth";
+import { useNavigate } from "react-router-dom";
+import auth from "../utils/auth"
 
-const LoginPage = ()=>{
+export default function LoginPage(){
     const navigate = useNavigate();
     const admin = {
         username : 'admin',
@@ -22,10 +22,10 @@ const LoginPage = ()=>{
             return navigate('/');
         }
     }
-    
+
     return(
-        <div className="bg-primary-gray flex items-center justify-center h-screen">
-            <div className="bg-white p-6 rounded-xl shadow-xl w-[400px] sm:mx-3">
+        <div className="flex items-center justify-center h-screen bg-[url('https://images.pexels.com/photos/1021066/pexels-photo-1021066.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')] bg-cover">
+            <div className="backdrop-blur-sm bg-white/20 p-6 rounded-xl shadow-xl w-[300px] text-sm sm:mx-3">
                 <h1 className="text-3xl font-semibold mb-4 text-center font-roboto">
                     Log In
                 </h1>
@@ -45,12 +45,12 @@ const LoginPage = ()=>{
                         </div>
                         <a href="#" className="text-primary-blue font-semibold hover:underline">Forgot Password?</a>
                     </div>
-                    <button type="submit" className="w-full bg-secondary-blue text-white py-2 rounded-md hover:bg-hover-blue">
+                    <button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-green-200 hover:from-green-500 hover:to-yellow-500 text-white py-2 rounded-md ">
                     Log In
                     </button>
                     <div className="my-4 text-center">
                         <span>Not an admin?
-                            <a href="src/pages/login/register.html"className="text-secondary-blue font-semibold hover:text-hover-blue hover:underline">Sign Up</a>
+                            <a href="src/pages/login/register.html"className="text-primary-blue font-semibold hover:text-pink-400 hover:underline">Sign Up</a>
                         </span>
                     </div>
                 </form>
@@ -58,5 +58,3 @@ const LoginPage = ()=>{
         </div>
     )
 }
-
-export default LoginPage;
