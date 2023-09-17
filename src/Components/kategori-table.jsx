@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-export default function KategoriTable({ database }) {
+export default function KategoriTable({ database, dbHapus }) {
   let db;
   if (database == undefined) {
     db = [];
@@ -19,8 +19,7 @@ export default function KategoriTable({ database }) {
         tr = target.parentElement.parentElement.parentElement.parentElement;
       db.splice([tr.children[0].innerText - 1], 1);
       console.log([tr.children[0].innerText - 1]);
-      //   hapus = db_kategori;
-      //   props.menghapus(hapus);
+      dbHapus(db);
     }
   };
 
@@ -119,4 +118,5 @@ export default function KategoriTable({ database }) {
 
 KategoriTable.propTypes = {
   database: PropTypes.array,
+  dbHapus: PropTypes.func,
 };

@@ -8,10 +8,12 @@ import KategoriTambah from "../Components/kategori-tambah";
 import KategoriCari from "../Components/kategori-cari";
 
 export default function KategoiKamarPage() {
-  const [database, setDatabase] = useState(useContext(global));
+  const [database, setDatabase] = useState(useContext(global).database);
+  const func = useContext(global).func;
 
   const tambah = (value) => {
     setDatabase(value.map((el) => el));
+    func(value);
   };
 
   const cari = (value) => {
@@ -19,8 +21,8 @@ export default function KategoiKamarPage() {
   };
   const hapus = (value) => {
     setDatabase(value.map((el) => el));
+    func(value);
   };
-  console.log(database);
 
   return (
     <div className="w-full">
@@ -33,7 +35,7 @@ export default function KategoiKamarPage() {
             <KategoriTambah database={database} tambah={tambah} />
             <KategoriCari database={database} cari={cari} />
           </div>
-          <KategoriTable database={database} menghapus={hapus} />
+          <KategoriTable database={database} dbHapus={hapus} />
         </form>
       </div>
     </div>
