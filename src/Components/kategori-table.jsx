@@ -118,5 +118,5 @@ export default function KategoriTable({ database }) {
 }
 
 KategoriTable.propTypes = {
-  database: PropTypes.object,
+  database: PropTypes.array,
 };

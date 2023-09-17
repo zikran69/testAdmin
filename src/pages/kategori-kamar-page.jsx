@@ -1,13 +1,14 @@
 import { useState } from "react";
-// import { useContext } from "react";
+import { useContext } from "react";
+import { global } from "../assets/context";
 
-import db_hotel from "../db_hotel.json";
+// import db_hotel from "../db_hotel.json";
 import KategoriTable from "../Components/kategori-table";
 import KategoriTambah from "../Components/kategori-tambah";
 import KategoriCari from "../Components/kategori-cari";
 
 export default function KategoiKamarPage() {
-  const [database, setDatabase] = useState(db_hotel);
+  const [database, setDatabase] = useState(useContext(global));
 
   const tambah = (value) => {
     setDatabase(value.map((el) => el));
@@ -19,6 +20,7 @@ export default function KategoiKamarPage() {
   const hapus = (value) => {
     setDatabase(value.map((el) => el));
   };
+  console.log(database);
 
   return (
     <div className="w-full">

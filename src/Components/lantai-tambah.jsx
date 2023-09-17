@@ -26,6 +26,6 @@ export default function LantaiTambah({ database, tambah }) {
   );
 }
 LantaiTambah.propTypes = {
-  database: PropTypes.object,
+  database: PropTypes.array,
   tambah: PropTypes.func,
 };

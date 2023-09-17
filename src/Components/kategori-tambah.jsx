@@ -27,6 +27,6 @@ export default function KategoriTambah({ database, tambah }) {
   );
 }
 KategoriTambah.propTypes = {
-  database: PropTypes.object,
+  database: PropTypes.array,
   tambah: PropTypes.func,
 };

@@ -18,6 +18,6 @@ export default function KategoriCari({ database, cari }) {
 }
 
 KategoriCari.propTypes = {
-  database: PropType.object,
+  database: PropType.array,
   cari: PropType.func,
 };

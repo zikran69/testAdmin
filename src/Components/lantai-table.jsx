@@ -114,5 +114,5 @@ export default function LantaiTable({ database }) {
 }
 
 LantaiTable.propTypes = {
-  database: PropTypes.object,
+  database: PropTypes.array,
 };

@@ -118,5 +118,5 @@ export default function ListTable({ database }) {
 }
 
 ListTable.propTypes = {
-  database: PropTypes.object,
+  database: PropTypes.array,
 };
