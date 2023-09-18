@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [db, setDb] = useState();
   useEffect(() => {
-    fetch("https://650742c63a38daf4803f53cd.mockapi.io/kamar")
+    fetch("https://6507a74b3a38daf4803f9ee4.mockapi.io/kamar")
       .then((res) => res.json())
       .then(setDb);
   }, []);
