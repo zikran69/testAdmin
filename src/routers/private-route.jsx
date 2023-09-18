@@ -47,7 +47,7 @@ function PrivateRoute() {
             ></div>
             <aside
               id="sidebar"
-              className="p-4 hidden lg:block text-secondary-gray font-medium lg:w-[250px] h-screen lg:h-full absolute lg:static top-0 left-0 bg-white shrink-0 overflow-auto w-[300px] z-30"
+              className="p-4 hidden lg:block text-secondary-gray font-medium lg:w-[220px] h-screen lg:h-full absolute lg:static top-0 left-0 bg-white shrink-0 overflow-auto w-[300px] z-30"
             >
               <h4 className="mb-3 font-semibold">Menu</h4>
               <div className="mb-2">

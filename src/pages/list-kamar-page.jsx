@@ -20,7 +20,7 @@ export default function ListKamarPage() {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full lg:w-[calc(100vw-220px)]">
       <div className="bg-primary-gray grow overflow-y-auto h-[calc(100vh-67.33px)]">
         <h1 className="p-4 font-raleway text-2xl font-semibold">List Kamar</h1>
         <form className="font-roboto px-4 mx-4 border rounded-lg bg-white max-md:text-sm overflow-auto">
