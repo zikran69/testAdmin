@@ -25,14 +25,14 @@ export default function NewKamar({ database, tambah }) {
       db.push(newKamar);
     };
     create(
-      `id-${Math.random() * 11}`,
-      `kategori-${Math.random() * 3}`,
-      `lantai-${Math.random() * 4}`,
-      `nomorKamar-${Math.random() * 5}`,
-      `fasilitas-${Math.random() * 6}`,
-      `harga-${Math.random() * 7}`,
-      `keterangan-${Math.random() * 8}`,
-      `status-${Math.random() * 9}`
+      `id-${Math.random()}`,
+      `kategori-${Math.random()}`,
+      `lantai-${Math.random()}`,
+      `nomorKamar-${Math.random()}`,
+      `fasilitas-${Math.random()}`,
+      `harga-${Math.random()}`,
+      `keterangan-${Math.random()}`,
+      `status-${Math.random()}`
     );
     tambah(db);
   };
