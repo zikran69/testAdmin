@@ -1,7 +1,10 @@
 import PropTypes from "prop-types";
-export default function NewKamar({ database, tambah }) {
+export default function NewKamar({ database }) {
   const db = database;
-  const tambahKamar = () => {
+  const isiForm = () => {
+    const popUp = document.getElementById("layer");
+    popUp.classList.toggle("hidden");
+    popUp.classList.toggle("flex");
     const create = (
       id,
       kategori,
@@ -34,11 +37,12 @@ export default function NewKamar({ database, tambah }) {
       `keterangan-${Math.random()}`,
       `status-${Math.random()}`
     );
-    tambah(db);
+    // tambah(db);
+    console.log(db);
   };
   return (
     <button
-      onClick={tambahKamar}
+      onClick={isiForm}
       id="tambah"
       type="button"
       className="py-2 px-5 bg-blue-400 rounded-md text-sm text-white hover:bg-hover-blue"
@@ -49,5 +53,4 @@ export default function NewKamar({ database, tambah }) {
 }
 NewKamar.propTypes = {
   database: PropTypes.array,
-  tambah: PropTypes.func,
 };

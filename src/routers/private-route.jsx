@@ -1,6 +1,7 @@
 import logo from "../assets/logo.png";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import auth from "../utils/auth";
+import PopUp from "../utils/pop-up";
 
 function PrivateRoute() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ function PrivateRoute() {
     return (
       <>
         <div>
-          <header className="flex justify-between items-center bg-primary-blue p-4 text-secondary-gray h-[67.33px]">
+          <header className="flex justify-between items-center bg-primary-blue p-4 text-secondary-gray h-[67.33px] min-w-[270px]">
             <div className="flex flex-col sm:flex-row justify-between sm:w-11/12 lg:w-full">
               <img className="w-32 ml-4" src={logo} alt="logo" />
               <div className="flex items-center">
@@ -170,6 +171,14 @@ function PrivateRoute() {
               <i className="ri-arrow-left-circle-fill bg-white rounded-full"></i>
             </button>
             <Outlet />
+          </div>
+          <div
+            id="layer"
+            className="hidden w-screen h-screen bg-primary-blue absolute top-0 left-0 z-30  justify-center items-center min-w-fit"
+          >
+            <div className="bg-white rounded-sm overflow-auto">
+              <PopUp />
+            </div>
           </div>
         </div>
       </>

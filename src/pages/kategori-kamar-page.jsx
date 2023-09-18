@@ -31,7 +31,7 @@ export default function KategoiKamarPage() {
         </h1>
         <form className="font-roboto px-4 mx-4 border rounded-lg bg-white max-md:text-sm overflow-auto">
           <div className="grid gap-5 place-items-start sm:flex justify-between m-4 ">
-            <NewKamar database={database} tambah={tambah} />
+            <NewKamar database={database} />
             <KategoriCari database={database} cari={cari} />
           </div>
           <KategoriTable database={database} dbHapus={hapus} />

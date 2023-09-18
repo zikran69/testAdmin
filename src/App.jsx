@@ -10,7 +10,6 @@ function App() {
       .then((res) => res.json())
       .then(setDb);
   }, []);
-  console.log(db);
   const store = {
     database: db,
     updateDb: (value) => {
