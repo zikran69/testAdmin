@@ -10,3 +10,5 @@ Currently, two official plugins are available:
 ### untuk menjalankan vite-react pake npm run dev
 
 ### npm install js-cookie
+
+### https://6507a74b3a38daf4803f9ee4.mockapi.io/
