@@ -20,7 +20,7 @@ export default function CheckoutKamarpage(){
                                 <form action="#">
                                     <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                                         <div className="flex flex-col">
-                                            <label for="kategori"
+                                            <label htmlFor="kategori"
                                                 className="text-secondary-gray">Kategori</label>
                                             <select name="kategori" id=""
                                                 className="w-full focus:outline-secondary-gray outline-secondary-gray p-2.5 rounded border border-gray-300">
@@ -30,7 +30,7 @@ export default function CheckoutKamarpage(){
                                             </select>
                                         </div>
                                         <div className="flex flex-col">
-                                            <label for="Lantai"
+                                            <label htmlFor="Lantai"
                                                 className="text-secondary-gray">Lantai</label>
                                             <select name="Lantai" id=""
                                                 className="w-full focus:outline-secondary-gray p-2.5 rounded border border-gray-300">
@@ -40,7 +40,7 @@ export default function CheckoutKamarpage(){
                                             </select>
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="No kamar">No kamar</label>
+                                            <label className="text-zinc-800" htmlFor="No kamar">No kamar</label>
                                             <select name="No kamar" id=""
                                                 className="w-full focus:outline-secondary-gray p-2.5 rounded border border-gray-300">
                                                 <option>--pilih No kamar--</option>
@@ -49,32 +49,32 @@ export default function CheckoutKamarpage(){
                                             </select>
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="Harga kamar">Harga kamar</label>
+                                            <label className="text-zinc-800" htmlFor="Harga kamar">Harga kamar</label>
                                             <input type="text" name="Harga kamar" id="Harga kamar"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="Tanggal check-in">Tanggal check-in</label>
+                                            <label className="text-zinc-800" htmlFor="Tanggal check-in">Tanggal check-in</label>
                                             <input type="text" name="Tanggal check-in" id="Tanggal checkin"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="jam check-in">jam check-in</label>
+                                            <label className="text-zinc-800" htmlFor="jam check-in">jam check-in</label>
                                             <input type="text" name="jam check-in" id="jam check-in"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="Tanggal Check-out">Tanggal Check-out</label>
+                                            <label className="text-zinc-800" htmlFor="Tanggal Check-out">Tanggal Check-out</label>
                                             <input type="text" name="Tanggal Check-out" id="Tanggal Check-out"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="Jam Check-out">Jam Check-out</label>
+                                            <label className="text-zinc-800" htmlFor="Jam Check-out">Jam Check-out</label>
                                             <input type="text" name="Jam Check-out" id="Jam Check-out"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="jumlah-hari">Jumlah hari</label>
+                                            <label className="text-zinc-800" htmlFor="jumlah-hari">Jumlah hari</label>
                                             <input type="text" name="jumlah-hari" id="jumlah-hari"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
@@ -84,44 +84,44 @@ export default function CheckoutKamarpage(){
                                     </div>
                                     <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="nik">Nik</label>
+                                            <label className="text-zinc-800" htmlFor="nik">Nik</label>
                                             <input type="text" name="nik" id="nik"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="nama-lengkap">Nama lengkap</label>
+                                            <label className="text-zinc-800" htmlFor="nama-lengkap">Nama lengkap</label>
                                             <input type="text" name="nama-lengkap" id="nama-lengkap"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="no-telepon">No telepon</label>
+                                            <label className="text-zinc-800" htmlFor="no-telepon">No telepon</label>
                                             <input type="text" name="no-telepon" id="no-telepon"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="email">Email</label>
+                                            <label className="text-zinc-800" htmlFor="email">Email</label>
                                             <input type="text" name="email" id="email"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="alamat">Alamat</label>
+                                            <label className="text-zinc-800" htmlFor="alamat">Alamat</label>
                                             <input type="text" name="alamat" id="alamat"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                     </div>
                                     <div className="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="untuk-berapa-orang">Untuk berapa orang</label>
+                                            <label className="text-zinc-800" htmlFor="untuk-berapa-orang">Untuk berapa orang</label>
                                             <input type="text" name="untuk-berapa-orang" id="untuk-berapa-orang"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="metode-pembayaran">Metode pembayaran</label>
+                                            <label className="text-zinc-800" htmlFor="metode-pembayaran">Metode pembayaran</label>
                                             <input type="text" name="metode-pembayaran" id="metode-pembayaran"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
                                         <div className="flex flex-col">
-                                            <label className="text-zinc-800" for="jumlah-bayar">Jumlah bayar</label>
+                                            <label className="text-zinc-800" htmlFor="jumlah-bayar">Jumlah bayar</label>
                                             <input type="text" name="jumlah-bayar" id="jumlah-bayar"
                                                 className="focus:outline-secondary-gray p-2 rounded border border-gray-300" />
                                         </div>
