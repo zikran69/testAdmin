@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import ProtectedRoute from "./protected-route";
 import PrivateRoute from "./private-route";
 
+
 import LoginPage from "../Components/pages/login-page";
 import DashboardPage from "../Components/pages/dashboard-page";
 import ProfilePage from "../Components/pages/profile-page";
@@ -14,6 +15,7 @@ import CheckinKamarPage from "../Components/pages/checkin-kamar-page";
 import CheckoutKamarpage from "../Components/pages/checkout-kamar-page";
 import LaporanPage from "../Components/pages/laporan-page";
 import AdministratorPage from "../Components/pages/administrator/administrator-page";
+
 
 export default function Router() {
   return (

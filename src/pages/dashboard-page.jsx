@@ -6,7 +6,7 @@ export default function Dasboard(){
             <div>
                 <h1 className="text-2xl font-semibold ml-4 my-6">Dashboard</h1>
             </div>
-            <div className="px-4 mx-auto grid place-items-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 text-secondary-gray gap-10">
+            <div className="px-4 mx-auto grid place-items-center sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 text-secondary-gray gap-10 z-10">
                 <div
                 className="relative p-6 h-[115px] w-full sm:w-[240px] bg-white shadow-xl rounded-lg flex"
                 >
