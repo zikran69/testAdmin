@@ -4,9 +4,10 @@ import { global } from "../assets/context";
 
 import KategoriTable from "../Components/kategori-table";
 import NewKamar from "../Components/new-kamar";
-import KategoriCari from "../Components/kategori-cari";
+import Cari from "../Components/Cari";
 
 export default function KategoiKamarPage() {
+  const db = useContext(global).database;
   const [database, setDatabase] = useState(useContext(global).database);
   const updateDb = useContext(global).updateDb;
 
@@ -16,7 +17,7 @@ export default function KategoiKamarPage() {
   };
 
   const cari = (value) => {
-    alert(value);
+    setDatabase(db.filter((e) => e.kategori.includes(value)));
   };
   const hapus = (value) => {
     setDatabase(value.map((el) => el));
@@ -32,7 +33,7 @@ export default function KategoiKamarPage() {
         <form className="font-roboto px-4 mx-4 border rounded-lg bg-white max-md:text-sm overflow-auto">
           <div className="grid gap-5 place-items-start sm:flex justify-between m-4 ">
             <NewKamar database={database} />
-            <KategoriCari database={database} cari={cari} />
+            <Cari database={database} cari={cari} />
           </div>
           <KategoriTable database={database} dbHapus={hapus} />
         </form>
