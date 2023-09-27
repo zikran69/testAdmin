@@ -7,8 +7,8 @@ import NewKamar from "../Components/new-kamar";
 import Cari from "../Components/Cari";
 
 export default function KategoiKamarPage() {
-  const db = useContext(global).database;
-  const [database, setDatabase] = useState(useContext(global).database);
+  const storage = useContext(global).database;
+  const [database, setDatabase] = useState(storage);
   const updateDb = useContext(global).updateDb;
 
   const tambah = (value) => {
@@ -17,11 +17,10 @@ export default function KategoiKamarPage() {
   };
 
   const cari = (value) => {
-    setDatabase(db.filter((e) => e.kategori.includes(value)));
+    setDatabase(storage.filter((e) => e.kategori.includes(value)));
   };
   const hapus = (value) => {
-    setDatabase(value.map((el) => el));
-    updateDb(value);
+    console.log(value);
   };
 
   return (
@@ -35,7 +34,7 @@ export default function KategoiKamarPage() {
             <NewKamar database={database} />
             <Cari database={database} cari={cari} />
           </div>
-          <KategoriTable database={database} dbHapus={hapus} />
+          <KategoriTable database={database} value={hapus} />
         </form>
       </div>
     </div>

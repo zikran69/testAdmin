@@ -6,7 +6,6 @@ export default function PopUp() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    console.log(formData);
     const {
       kategoriKamar,
       lantai,

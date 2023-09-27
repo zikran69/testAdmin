@@ -38,7 +38,6 @@ export default function NewKamar({ database }) {
       `status-${Math.random()}`
     );
     // tambah(db);
-    console.log(db);
   };
   return (
     <button
