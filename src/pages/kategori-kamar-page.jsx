@@ -10,11 +10,6 @@ export default function KategoiKamarPage() {
   const dataHotel = useContext(global).dataHotel;
   const [display, setDisplay] = useState(dataHotel);
 
-  const tambah = (value) => {
-    // setDisplay(value.map((el) => el));
-    console.log(value);
-  };
-
   const cari = (value) => {
     setDisplay(dataHotel.filter((e) => e.kategori.includes(value)));
   };
@@ -30,7 +25,7 @@ export default function KategoiKamarPage() {
         </h1>
         <form className="font-roboto px-4 mx-4 border rounded-lg bg-white max-md:text-sm overflow-auto">
           <div className="grid gap-5 place-items-start sm:flex justify-between m-4 ">
-            <TambahKamar database={display} />
+            <TambahKamar />
             <Cari database={display} cari={cari} />
           </div>
           <KategoriTable database={display} value={hapus} />

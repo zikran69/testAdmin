@@ -1,4 +1,8 @@
-export default function PopUp() {
+import { global } from "../assets/context";
+import { useContext } from "react";
+
+export default function FormTambah() {
+  const addDataHotel = useContext(global).addDataHotel;
   const close = () => {
     document.getElementById("layer").classList.toggle("hidden");
     document.getElementById("layer").classList.toggle("flex");
@@ -16,6 +20,19 @@ export default function PopUp() {
       keterangan,
       image,
     } = Object.fromEntries(formData);
+    const newkamar = {
+      id: `id-${Math.random()}`,
+      kategori: kategoriKamar,
+      lantai: lantai,
+      nomorKamar: nomorKamar,
+      fasilitas: fasilitas,
+      harga: harga,
+      status: status,
+      keterangan: keterangan,
+      image: image,
+      aktif: false,
+    };
+    addDataHotel(newkamar);
     close();
   };
   return (
