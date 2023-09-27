@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-export default function KategoriTable({ database }) {
+export default function KategoriTable({ database, dbHapus }) {
   let db;
   if (database == undefined) {
     db = [];
@@ -18,9 +18,7 @@ export default function KategoriTable({ database }) {
       } else
         tr = target.parentElement.parentElement.parentElement.parentElement;
       db.splice([tr.children[0].innerText - 1], 1);
-      console.log([tr.children[0].innerText - 1]);
-      //   hapus = db_kategori;
-      //   props.menghapus(hapus);
+      dbHapus(db);
     }
   };
 
@@ -57,7 +55,7 @@ export default function KategoriTable({ database }) {
           <tbody>
             {db.map(({ id, kategori, harga, fasilitas, status }, index) => {
               return (
-                <tr key={id}>
+                <tr key={id} className="capitalize">
                   <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
                     {index + 1}
                   </td>
@@ -118,5 +116,6 @@ export default function KategoriTable({ database }) {
 }
 
 KategoriTable.propTypes = {
-  database: PropTypes.object,
+  database: PropTypes.array,
+  dbHapus: PropTypes.func,
 };

@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function LantaiTable({ database }) {
+export default function LantaiTable({ database, dbHapus }) {
   let db;
   if (database == undefined) {
     db = [];
@@ -13,16 +13,14 @@ export default function LantaiTable({ database }) {
     else if (target.title == "edit" || target.title == "icon edit")
       console.log("ini edit");
     else if (target.title == "hapus" || target.title == "icon hapus") {
-      //   let tr;
+      let tr;
       if (target.title == "hapus") {
-        // tr = target.parentElement.parentElement.parentElement;
-      }
-      //    else
-      //     tr = target.parentElement.parentElement.parentElement.parentElement;
-      // database.splice([tr.children[0].innerText-1], 1);
-      // console.log([tr.children[0].innerText-1]);
-      // hapus = lantai;
-      // props.menghapus(hapus);
+        tr = target.parentElement.parentElement.parentElement;
+      } else
+        tr = target.parentElement.parentElement.parentElement.parentElement;
+      db.splice([tr.children[0].innerText - 1], 1);
+      console.log([tr.children[0].innerText - 1]);
+      dbHapus(db);
     }
   };
 
@@ -114,5 +112,6 @@ export default function LantaiTable({ database }) {
 }
 
 LantaiTable.propTypes = {
-  database: PropTypes.object,
+  database: PropTypes.array,
+  dbHapus: PropTypes.func,
 };
