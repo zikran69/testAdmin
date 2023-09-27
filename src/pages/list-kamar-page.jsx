@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { global } from "../assets/context";
 
 import ListTable from "../Components/list-table";
-import NewKamar from "../Components/new-kamar";
+import NewKamar from "../Components/tambah-kamar";
 
 export default function ListKamarPage() {
   const [database, setStorage] = useState(useContext(global).database);
