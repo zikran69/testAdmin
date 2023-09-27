@@ -55,7 +55,7 @@ export default function KategoriTable({ database, dbHapus }) {
           <tbody>
             {db.map(({ id, kategori, harga, fasilitas, status }, index) => {
               return (
-                <tr key={id}>
+                <tr key={id} className="capitalize">
                   <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
                     {index + 1}
                   </td>
