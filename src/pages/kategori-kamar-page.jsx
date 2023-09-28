@@ -1,23 +1,21 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { global } from "../assets/context";
 
 import KategoriTable from "../Components/kategori-table";
-import NewKamar from "../Components/new-kamar";
+import TambahKamar from "../Components/tambah-kamar";
 import Cari from "../Components/Cari";
 
 export default function KategoiKamarPage() {
-  const storage = useContext(global).database;
-  const [database, setDatabase] = useState(storage);
-  const updateDb = useContext(global).updateDb;
+  const dataHotel = useContext(global).dataHotel;
+  const [display, setDisplay] = useState(dataHotel);
 
-  const tambah = (value) => {
-    setDatabase(value.map((el) => el));
-    updateDb(value);
-  };
+  useEffect(() => {
+    setDisplay(dataHotel);
+  }, [dataHotel]);
 
   const cari = (value) => {
-    setDatabase(storage.filter((e) => e.kategori.includes(value)));
+    setDisplay(dataHotel.filter((e) => e.kategori.includes(value)));
   };
   const hapus = (value) => {
     console.log(value);
@@ -30,11 +28,11 @@ export default function KategoiKamarPage() {
           Kategori Kamar
         </h1>
         <form className="font-roboto px-4 mx-4 border rounded-lg bg-white max-md:text-sm overflow-auto">
-          <div className="grid gap-5 place-items-start sm:flex justify-between m-4 ">
-            <NewKamar database={database} />
-            <Cari database={database} cari={cari} />
+          <div className="grid gap-5 place-items-start sm:flex justify-between m-4">
+            <TambahKamar />
+            <Cari cari={cari} />
           </div>
-          <KategoriTable database={database} value={hapus} />
+          <KategoriTable database={display} value={hapus} />
         </form>
       </div>
     </div>

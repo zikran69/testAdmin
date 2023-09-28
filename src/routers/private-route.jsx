@@ -1,7 +1,7 @@
 import logo from "../assets/logo.png";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import auth from "../utils/auth";
-import PopUp from "../utils/pop-up";
+import FormTambah from "../utils/form-tambah";
 
 function PrivateRoute() {
   const navigate = useNavigate();
@@ -172,14 +172,7 @@ function PrivateRoute() {
             </button>
             <Outlet />
           </div>
-          <div
-            id="layer"
-            className="hidden w-screen h-screen bg-primary-blue absolute top-0 left-0 z-30  justify-center items-center min-w-fit"
-          >
-            <div className="bg-white rounded-sm overflow-auto">
-              <PopUp />
-            </div>
-          </div>
+          <FormTambah />
         </div>
       </>
     );
