@@ -2,7 +2,7 @@ import FormTambah from "../utils/form-tambah";
 export default function TambahKamar() {
   const tambahKamar = (e) => {
     e.preventDefault();
-    const formTambah = document.getElementById("layer");
+    const formTambah = document.getElementById("layerFormTambah");
     console.log(formTambah);
     formTambah.classList.toggle("hidden");
     formTambah.classList.toggle("flex");
