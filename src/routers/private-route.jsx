@@ -100,7 +100,7 @@ function PrivateRoute() {
                       <i className="ri-hotel-bed-line mr-2"></i>Kategori Kamar
                     </Link>
                   </div>
-                  <div className="pl-6">
+                  {/* <div className="pl-6">
                     <Link
                       onClick={popUp}
                       to="/lantai-kamar"
@@ -108,7 +108,7 @@ function PrivateRoute() {
                     >
                       <i className="ri-hotel-bed-line mr-2"></i>Lantai Kamar
                     </Link>
-                  </div>
+                  </div> */}
                   <div className="pl-6">
                     <Link
                       onClick={popUp}

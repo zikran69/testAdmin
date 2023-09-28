@@ -32,7 +32,7 @@ export default function KategoiKamarPage() {
             <TambahKamar />
             <Cari cari={cari} />
           </div>
-          <KategoriTable database={display} value={hapus} />
+          <KategoriTable dataHotel={display} value={hapus} />
         </form>
       </div>
     </div>

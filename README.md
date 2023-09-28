@@ -17,4 +17,4 @@ Currently, two official plugins are available:
 
 ## npm init @eslint/config
 
-## https://6507a74b3a38daf4803f9ee4.mockapi.io/kamar
+## mocapi datakamar https://6507a74b3a38daf4803f9ee4.mockapi.io/api/v1/rooms
