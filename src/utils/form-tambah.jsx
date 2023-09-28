@@ -36,7 +36,7 @@ export default function FormTambah() {
     close();
   };
   return (
-    <div className="font-ralewa px-8 py-4 bg-zinc-100 w-fit rounded-sm">
+    <div className="font-raleway px-8 py-4 bg-zinc-100 w-fit rounded-sm h-fit">
       <div className="flex justify-between">
         <h1 className="mb-4 px-2 text-lg tracking-wider">Form Tambah Kamar</h1>
         <button type="button" onClick={close}>
