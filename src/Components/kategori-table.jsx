@@ -1,5 +1,8 @@
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import { global } from "../assets/context";
 export default function KategoriTable({ dataHotel, hapus }) {
+  const updateDataID = useContext(global).updateDataID;
   let display;
   if (dataHotel == undefined) {
     display = [];
@@ -9,9 +12,17 @@ export default function KategoriTable({ dataHotel, hapus }) {
     const target = el.target;
     if (el.target.title == "detail" || target.title == "icon detail")
       console.log("ini detail");
-    else if (target.title == "edit" || target.title == "icon edit")
-      console.log("ini edit");
-    else if (target.title == "hapus" || target.title == "icon hapus") {
+    else if (target.title == "edit" || target.title == "icon edit") {
+      let tr;
+      if (target.title == "edit") {
+        tr = target.parentElement.parentElement.parentElement;
+      } else
+        tr = target.parentElement.parentElement.parentElement.parentElement;
+      updateDataID(display[tr.children[0].innerText - 1].id);
+      const formTambah = document.getElementById("layerFormEdit");
+      formTambah.classList.toggle("hidden");
+      formTambah.classList.toggle("flex");
+    } else if (target.title == "hapus" || target.title == "icon hapus") {
       let tr;
       if (target.title == "hapus") {
         tr = target.parentElement.parentElement.parentElement;
@@ -95,11 +106,11 @@ export default function KategoriTable({ dataHotel, hapus }) {
                         </button>
                         <button
                           type="button"
-                          title="icon edit"
+                          title="edit"
                           className="edit py-1 px-5 bg-yellow-400 rounded-md hover:bg-hover-yellow"
                         >
                           <i
-                            title="edit"
+                            title="icon edit"
                             className="ri-file-edit-line text-white"
                           ></i>
                         </button>

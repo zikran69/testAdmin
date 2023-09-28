@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 function App() {
   const [dataHotel, setDataHotel] = useState();
   const [update, setUpdate] = useState(false);
+  const [dataID, setDataID] = useState(null);
 
   useEffect(() => {
     fetch("https://6507a74b3a38daf4803f9ee4.mockapi.io/api/v1/rooms")
@@ -16,6 +17,11 @@ function App() {
 
   const store = {
     dataHotel: dataHotel,
+
+    dataID: dataID,
+    updateDataID: (value) => {
+      setDataID(value);
+    },
 
     update: update,
     loadUpdate: (value) => {
