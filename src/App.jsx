@@ -5,12 +5,14 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [dataHotel, setDataHotel] = useState();
+  const [update, setUpdate] = useState(false);
 
   useEffect(() => {
-    fetch("https://6507a74b3a38daf4803f9ee4.mockapi.io/kamar")
+    fetch("https://6507a74b3a38daf4803f9ee4.mockapi.io/api/v1/rooms")
       .then((res) => res.json())
       .then(setDataHotel);
-  }, []);
+    setUpdate(false);
+  }, [update]);
 
   const store = {
     dataHotel: dataHotel,
@@ -18,8 +20,9 @@ function App() {
       setDataHotel(value);
     },
 
-    addDataHotel: (value) => {
-      setDataHotel([...dataHotel, value]);
+    update: update,
+    loadUpdate: (value) => {
+      setUpdate(value);
     },
   };
 

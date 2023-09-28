@@ -172,12 +172,6 @@ function PrivateRoute() {
             </button>
             <Outlet />
           </div>
-          {/* <div id="layer" className="hidden">
-            <div className="w-screen h-screen bg-primary-blue absolute top-0 left-0 z-30"></div>
-            <div className="absolute top-[25%] z-30 bg-green-200 w-screen h-fit flex justify-center my-auto">
-              <FormTambah />
-            </div>
-          </div> */}
           <FormTambah />
         </div>
       </>

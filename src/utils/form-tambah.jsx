@@ -1,8 +1,12 @@
+import { useContext } from "react";
+import { global } from "../assets/context";
+
 export default function FormTambah() {
   const close = () => {
     document.getElementById("layerFormTambah").classList.toggle("hidden");
     document.getElementById("layerFormTambah").classList.toggle("flex");
   };
+  const loadUpdate = useContext(global).loadUpdate;
 
   const submitTambah = (e) => {
     e.preventDefault();
@@ -17,6 +21,22 @@ export default function FormTambah() {
       keterangan,
       image,
     } = Object.fromEntries(formData);
+    fetch("https://6507a74b3a38daf4803f9ee4.mockapi.io/api/v1/rooms", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        kategori: kategori,
+        lantai: lantai,
+        nomorKamar: nomorKamar,
+        fasilitas: fasilitas,
+        harga: harga,
+        status: status,
+        keterangan: keterangan,
+        image: image,
+        aktif: true,
+      }),
+    });
+    loadUpdate(true);
     close();
   };
 
