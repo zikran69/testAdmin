@@ -16,9 +16,6 @@ function App() {
 
   const store = {
     dataHotel: dataHotel,
-    updateDataHotel: (value) => {
-      setDataHotel(value);
-    },
 
     update: update,
     loadUpdate: (value) => {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useContext } from "react";
 import { global } from "../assets/context";
 
@@ -9,6 +9,10 @@ import Cari from "../Components/Cari";
 export default function KategoiKamarPage() {
   const dataHotel = useContext(global).dataHotel;
   const [display, setDisplay] = useState(dataHotel);
+
+  useEffect(() => {
+    setDisplay(dataHotel);
+  }, [dataHotel]);
 
   const cari = (value) => {
     setDisplay(dataHotel.filter((e) => e.kategori.includes(value)));
