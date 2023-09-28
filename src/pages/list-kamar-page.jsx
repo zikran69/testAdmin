@@ -7,6 +7,7 @@ import TambahKamar from "../Components/tambah-kamar";
 import Cari from "../Components/Cari";
 
 export default function ListKamarPage() {
+  const loadUpdate = useContext(global).loadUpdate;
   const dataHotel = useContext(global).dataHotel;
   const [display, setDisplay] = useState(dataHotel);
 
@@ -19,7 +20,11 @@ export default function ListKamarPage() {
   };
 
   const hapus = (value) => {
-    console.log(value);
+    fetch(`https://6507a74b3a38daf4803f9ee4.mockapi.io/api/v1/rooms/${value}`, {
+      method: "DELETE",
+    });
+    loadUpdate(true);
+    alert("data dihapus!");
   };
 
   return (
@@ -31,7 +36,7 @@ export default function ListKamarPage() {
             <TambahKamar />
             <Cari cari={cari} />
           </div>
-          <ListTable dataHotel={display} value={hapus} />
+          <ListTable dataHotel={display} hapus={hapus} />
         </form>
       </div>
     </div>

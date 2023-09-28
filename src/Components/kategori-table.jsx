@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-export default function KategoriTable({ dataHotel, value }) {
+export default function KategoriTable({ dataHotel, hapus }) {
   let display;
   if (dataHotel == undefined) {
     display = [];
@@ -17,9 +17,7 @@ export default function KategoriTable({ dataHotel, value }) {
         tr = target.parentElement.parentElement.parentElement;
       } else
         tr = target.parentElement.parentElement.parentElement.parentElement;
-      // db.splice([tr.children[0].innerText - 1], 1);
-      // dbHapus(db);
-      value(display[tr.children[0].innerText - 1].id);
+      hapus(display[tr.children[0].innerText - 1].id);
     }
   };
 
@@ -120,5 +118,5 @@ export default function KategoriTable({ dataHotel, value }) {
 
 KategoriTable.propTypes = {
   dataHotel: PropTypes.array,
-  value: PropTypes.func,
+  hapus: PropTypes.func,
 };
