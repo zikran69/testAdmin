@@ -1,3 +1,4 @@
+import { object } from "prop-types";
 import { global } from "../assets/context";
 import { useContext } from "react";
 
@@ -9,8 +10,27 @@ export default function FormTambah() {
   };
 
   const submitTambah = (e) => {
-    console.log(e.target);
     e.preventDefault();
+    const formData = new FormData(e.target);
+    const {
+      kategori,
+      lantai,
+      nomorKamar,
+      fasilitas,
+      harga,
+      status,
+      keterangan,
+      image,
+    } = Object.fromEntries(formData);
+    console.log(
+      kategori,
+      lantai,
+      nomorKamar,
+      fasilitas,
+      harga,
+      status,
+      keterangan
+    );
     close();
   };
 
@@ -29,11 +49,11 @@ export default function FormTambah() {
         <div className="grid grid-cols-1 bg-white px-8 py-16 rounded-sm lg:w-[900px] max-lg:max-h-[450px] overflow-auto">
           <div className="text-center text-3xl font-semibold">Tambah Kamar</div>
           <form onSubmit={submitTambah} className="text-sm mt-4 overflow-auto">
-            {/* <div className="grid mx-sm:grid-cols-1 lg:grid-cols-2 lg:my-8 min-w-[350px]">
+            <div className="grid mx-sm:grid-cols-1 lg:grid-cols-2 lg:my-8 min-w-[350px]">
               <div className="grid gap-1 mb-2 ml-2">
                 <label className="text-left">Kategori Kamar</label>
                 <select
-                  id="add_kategori"
+                  name="kategori"
                   className="font-raleway h-10 pl-1 border rounded-sm bg-blue-50 active:bg-blue-100 md:w-[500px] lg:w-full"
                 >
                   <option value="Junior Suite">Junior Suite</option>
@@ -42,23 +62,31 @@ export default function FormTambah() {
                 </select>
               </div>
               <div className="grid gap-1 mb-2 ml-2">
-                <label className="text-left">Lantai</label>
-                <input className="font-raleway h-10 px-2 border rounded-sm bg-gray-50 md:w-[500px] lg:w-full" />
+                <label className="text-left">Lantai Kamar</label>
+                <select
+                  name="lantai"
+                  className="font-raleway h-10 pl-1 border rounded-sm bg-blue-50 active:bg-blue-100 md:w-[500px] lg:w-full"
+                >
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
               </div>
               <div className="grid gap-1 mb-2 ml-2">
                 <label className="text-left">Harga</label>
-                <input
-                  id="add_harga"
-                  value="$100/Night"
-                  type="text"
-                  disabled
-                  className="font-raleway py-[7px] h-10 px-2 border rounded-sm bg-gray-100 md:w-[500px] lg:w-full"
-                />
+                <select
+                  name="harga"
+                  className="font-raleway h-10 pl-1 border rounded-sm bg-blue-50 active:bg-blue-100 md:w-[500px] lg:w-full"
+                >
+                  <option value="100">100</option>
+                  <option value="200">200</option>
+                  <option value="300">300</option>
+                </select>
               </div>
               <div className="grid gap-1 mb-2 ml-2">
                 <label className="text-left">Status</label>
                 <select
-                  id="add_status"
+                  name="status"
                   className="font-raleway h-10 pl-1 border rounded-sm bg-blue-50 md:w-[500px] lg:w-full"
                 >
                   <option value="tersedia">tersedia</option>
@@ -68,8 +96,7 @@ export default function FormTambah() {
               <div className="grid gap-1 mb-2 ml-2">
                 <label className="text-left">Fasilitas</label>
                 <textarea
-                  id="add_fasilitas"
-                  disabled
+                  name="fasilitas"
                   className="font-raleway h-16 px-2 pt-2 border rounded-sm bg-gray-100 resize-none md:w-[500px] lg:w-full"
                 >
                   ac, tv
@@ -78,15 +105,22 @@ export default function FormTambah() {
               <div className="grid gap-1 mb-2 ml-2">
                 <label className="text-left">Keterangan</label>
                 <textarea
-                  id="add_keterangan"
+                  name="keterangan"
                   className="font-raleway h-16 px-2 pt-2 border rounded-sm bg-blue-50 resize-none md:w-[500px] lg:w-full"
                 ></textarea>
               </div>
               <div className="grid gap-1 mb-2 ml-2">
-                <label className="mr-2">Foto</label>
+                <label className="text-left">No Kamar</label>
                 <input
-                  id="add_foto"
-                  type="file"
+                  name="nomorKamar"
+                  className="py-[7px] h-10 pl-4 border rounded-sm bg-gray-50 md:w-[500px] lg:w-full"
+                ></input>
+              </div>
+              <div className="grid gap-1 mb-2 ml-2">
+                <label className="mr-2">Image (url)</label>
+                <input
+                  name="image"
+                  type="text"
                   className="py-[7px] h-10 pl-4 border rounded-sm bg-gray-50 md:w-[500px] lg:w-full"
                 />
               </div>
@@ -105,13 +139,7 @@ export default function FormTambah() {
               >
                 Save
               </button>
-            </div> */}
-            <button
-              type="submit"
-              className="bg-blue-500 hover:bg-hover-blue text-white font-bold py-2 px-4 rounded"
-            >
-              Save
-            </button>
+            </div>
           </form>
         </div>
       </div>

@@ -3,7 +3,6 @@ export default function TambahKamar() {
   const tambahKamar = (e) => {
     e.preventDefault();
     const formTambah = document.getElementById("layerFormTambah");
-    console.log(formTambah);
     formTambah.classList.toggle("hidden");
     formTambah.classList.toggle("flex");
   };
@@ -15,7 +14,7 @@ export default function TambahKamar() {
       >
         <i className="ri-hotel-bed-line mr-2"></i>Tambah Kamar
       </button>
-      <FormTambah />
+      {/* <FormTambah /> */}
       {/* <div
         id="layer"
         className="hidden w-screen h-screen absolute z-30 top-0 left-0"

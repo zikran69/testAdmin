@@ -178,6 +178,7 @@ function PrivateRoute() {
               <FormTambah />
             </div>
           </div> */}
+          <FormTambah />
         </div>
       </>
     );
