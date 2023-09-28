@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ProfilePage() {
   return (
     <div className="w-full lg:w-[calc(100vw-220px)]">
@@ -46,7 +48,9 @@ export default function ProfilePage() {
             <div className="flex items-center">
               <i className="ri-global-line text-4xl text-third-blue"></i>
               <span className="ml-2 border-collapse focus:outline-none font-raleway text-lg">
-                https://www.myhotel-yogya.com
+                <Link to="https://client-dashboard-hazel.vercel.app/">
+                  https://client-dashboard-hazel.vercel.app/
+                </Link>
               </span>
             </div>
             <div className="h-[1px] bg-blue-200 md:w-[500px] lg:w-full"></div>
