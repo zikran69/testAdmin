@@ -25,7 +25,7 @@ export default function FormTambah() {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({
-        kategori: kategori,
+        kategori: kategori.toLowerCase(),
         lantai: lantai,
         nomorKamar: nomorKamar,
         fasilitas: fasilitas,
