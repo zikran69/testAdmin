@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
-export default function KategoriTable({ database, dbHapus }) {
-  let db;
-  if (database == undefined) {
-    db = [];
-  } else db = database;
+export default function KategoriTable({ dataHotel, value }) {
+  let display;
+  if (dataHotel == undefined) {
+    display = [];
+  } else display = dataHotel;
 
   const opsi = (el) => {
     const target = el.target;
@@ -17,12 +17,13 @@ export default function KategoriTable({ database, dbHapus }) {
         tr = target.parentElement.parentElement.parentElement;
       } else
         tr = target.parentElement.parentElement.parentElement.parentElement;
-      db.splice([tr.children[0].innerText - 1], 1);
-      dbHapus(db);
+      // db.splice([tr.children[0].innerText - 1], 1);
+      // dbHapus(db);
+      value(display[tr.children[0].innerText - 1].id);
     }
   };
 
-  if (db.length > 0 && db != undefined) {
+  if (display.length > 0 && display != undefined) {
     return (
       <>
         <table
@@ -53,61 +54,63 @@ export default function KategoriTable({ database, dbHapus }) {
             </tr>
           </thead>
           <tbody>
-            {db.map(({ id, kategori, harga, fasilitas, status }, index) => {
-              return (
-                <tr key={id}>
-                  <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
-                    {index + 1}
-                  </td>
-                  <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
-                    {kategori}
-                  </td>
-                  <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
-                    ${harga}/night
-                  </td>
-                  <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
-                    {fasilitas}
-                  </td>
-                  <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
-                    {status}
-                  </td>
-                  <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
-                    <div className="flex justify-center items-center flex-nowrap">
-                      <button
-                        type="button"
-                        title="detail"
-                        className="detail mr-1 py-1 px-5 bg-green-400 rounded-md hover:bg-hover-green"
-                      >
-                        <i
-                          title="icon detail"
-                          className="ri-search-line text-white"
-                        ></i>
-                      </button>
-                      <button
-                        type="button"
-                        title="hapus"
-                        className="hapus mr-1 py-1 px-5 bg-red-400 rounded-md hover:bg-hover-red"
-                      >
-                        <i
-                          title="icon hapus"
-                          className="ri-delete-bin-line text-white"
-                        ></i>
-                      </button>
-                      <button
-                        type="button"
-                        title="icon edit"
-                        className="edit py-1 px-5 bg-yellow-400 rounded-md hover:bg-hover-yellow"
-                      >
-                        <i
-                          title="edit"
-                          className="ri-file-edit-line text-white"
-                        ></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              );
-            })}
+            {display.map(
+              ({ id, kategori, harga, fasilitas, status }, index) => {
+                return (
+                  <tr key={id} className="capitalize">
+                    <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
+                      {index + 1}
+                    </td>
+                    <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
+                      {kategori}
+                    </td>
+                    <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
+                      ${harga}/night
+                    </td>
+                    <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
+                      {fasilitas}
+                    </td>
+                    <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
+                      {status}
+                    </td>
+                    <td className="p-4 border-secondary-gray border border-b-2 border-opacity-10">
+                      <div className="flex justify-center items-center flex-nowrap">
+                        <button
+                          type="button"
+                          title="detail"
+                          className="detail mr-1 py-1 px-5 bg-green-400 rounded-md hover:bg-hover-green"
+                        >
+                          <i
+                            title="icon detail"
+                            className="ri-search-line text-white"
+                          ></i>
+                        </button>
+                        <button
+                          type="button"
+                          title="hapus"
+                          className="hapus mr-1 py-1 px-5 bg-red-400 rounded-md hover:bg-hover-red"
+                        >
+                          <i
+                            title="icon hapus"
+                            className="ri-delete-bin-line text-white"
+                          ></i>
+                        </button>
+                        <button
+                          type="button"
+                          title="icon edit"
+                          className="edit py-1 px-5 bg-yellow-400 rounded-md hover:bg-hover-yellow"
+                        >
+                          <i
+                            title="edit"
+                            className="ri-file-edit-line text-white"
+                          ></i>
+                        </button>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              }
+            )}
           </tbody>
         </table>
       </>
@@ -116,6 +119,6 @@ export default function KategoriTable({ database, dbHapus }) {
 }
 
 KategoriTable.propTypes = {
-  database: PropTypes.array,
-  dbHapus: PropTypes.func,
+  dataHotel: PropTypes.array,
+  value: PropTypes.func,
 };
