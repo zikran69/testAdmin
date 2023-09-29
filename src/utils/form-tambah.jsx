@@ -128,10 +128,10 @@ export default function FormTambah() {
             <div className="grid gap-1 mb-2 ml-2">
               <label className="text-left">Fasilitas</label>
               <textarea
+              defaultValue={'ac tv'}
                 name="fasilitas"
                 className="font-raleway h-16 px-2 pt-2 border rounded-sm bg-blue-50 active:bg-blue-100 resize-none md:w-[500px] lg:w-full"
               >
-                ac, tv
               </textarea>
             </div>
             <div className="grid gap-1 mb-2 ml-2">
