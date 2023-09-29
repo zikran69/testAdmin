@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { global } from "../assets/context";
+import { layer } from "../Components/opsi";
 
 export default function FormTambah() {
   const close = () => {
-    document.getElementById("layerFormTambah").classList.toggle("hidden");
-    document.getElementById("layerFormTambah").classList.toggle("flex");
+    layer(document.getElementById("layerFormTambah"));
   };
   const loadUpdate = useContext(global).loadUpdate;
 

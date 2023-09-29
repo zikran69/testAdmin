@@ -1,23 +1,22 @@
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import { global } from "../assets/context";
+import { tombolOpsi, layer } from "./opsi";
 export default function ListTable({ dataHotel, hapus }) {
+  const updateDataID = useContext(global).updateDataID;
   let display;
   if (dataHotel == undefined) {
     display = [];
   } else display = dataHotel;
 
   const opsi = (el) => {
-    const target = el.target;
-    if (el.target.title == "detail" || target.title == "icon detail")
-      console.log("ini detail");
-    else if (target.title == "edit" || target.title == "icon edit")
-      console.log("ini edit");
-    else if (target.title == "hapus" || target.title == "icon hapus") {
-      let tr;
-      if (target.title == "hapus") {
-        tr = target.parentElement.parentElement.parentElement;
-      } else
-        tr = target.parentElement.parentElement.parentElement.parentElement;
-      hapus(display[tr.children[0].innerText - 1].id);
+    if (el.target.title == "detail" || el.target.title == "icon detail")
+      updateDataID(tombolOpsi(display, el.target, "detail"));
+    else if (el.target.title == "edit" || el.target.title == "icon edit") {
+      updateDataID(tombolOpsi(display, el.target, "edit"));
+      layer(document.getElementById("layerFormEdit"));
+    } else if (el.target.title == "hapus" || el.target.title == "icon hapus") {
+      hapus(tombolOpsi(display, el.target, "hapus"));
     }
   };
 
