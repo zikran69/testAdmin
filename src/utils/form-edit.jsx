@@ -36,7 +36,7 @@ export default function FormEdit() {
           status: status,
           keterangan: keterangan,
           image: image,
-          aktif: true,
+          aktif: false,
         }),
       }
     );
