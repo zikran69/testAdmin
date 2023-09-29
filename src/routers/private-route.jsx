@@ -25,7 +25,9 @@ function PrivateRoute() {
             <div className="flex flex-col sm:flex-row justify-between sm:w-11/12 lg:w-full">
               <img className="w-32 ml-4" src={logo} alt="logo" />
               <div className="flex items-center">
-                <p className="sm:text-xl ml-8 mr-2">admin</p>
+                <Link to="/profile-user">
+                  <p className="sm:text-xl ml-8 mr-2">admin</p>
+                </Link>
                 <button
                   onClick={logout}
                   title="keluar"

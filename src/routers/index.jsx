@@ -14,6 +14,7 @@ import CheckinKamarPage from "../pages/checkin-kamar-page";
 import CheckoutKamarpage from "../pages/checkout-kamar-page";
 import LaporanPage from "../pages/laporan-page";
 import AdministratorPage from "../Components/administrator/administrator-page";
+import ProfilAdmin from "../Components/ProfilAdmin/ProfilAdmin";
 
 export default function Router() {
   return (
@@ -24,6 +25,7 @@ export default function Router() {
         </Route>
         <Route path="/" element={<PrivateRoute />}>
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/profile-user" element={<ProfilAdmin />} />
           <Route path="/administrator" element={<AdministratorPage />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="/kategori-kamar" element={<KategoriKamarPage />} />
