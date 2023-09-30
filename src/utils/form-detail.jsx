@@ -37,7 +37,7 @@ export default function FormDetail() {
           min-[768px]:top-[70px]
           w-fit
           min-[768px]:w-[500px]
-          min-[1024px]:w-[700px]
+          min-[1024px]:w-[800px]
           min-[1440px]:w-[900px]
           min-[1920px]:w-[1200px]
           "
