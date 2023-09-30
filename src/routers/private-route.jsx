@@ -87,7 +87,7 @@ function PrivateRoute() {
                       to="/profile"
                       className="hover:text-secondary-blue"
                     >
-                      <i className="ri-profile-line mr-2"></i>profile hotel
+                      <i className="ri-profile-line mr-2"></i>Profil Hotel
                     </Link>
                   </div>
                 </details>
