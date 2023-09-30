@@ -80,7 +80,7 @@ export default function FormTambah() {
         mt-4 
         overflow-auto"
         >
-          <div className="grid mx-sm:grid-cols-1 lg:grid-cols-2 lg:my-8 min-w-[250px]">
+          <div className="grid grid-cols-1 min-[768px]:grid-cols-2 lg:my-8 min-w-[250px]">
             <div className="grid gap-1 mb-2 ml-2">
               <label className="text-left">Kategori Kamar</label>
               <select
