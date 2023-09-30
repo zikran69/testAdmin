@@ -102,11 +102,49 @@ export default function Dashboard() {
               </p>
             </div>
           </div>
-          <div className="bg-white m-8 p-4 rounded shadow">
-            <h4 className="text-xl font-semibold ml-4 my-1">
+          <div
+            className="
+          bg-white 
+          m-4 
+          p-2 
+          rounded
+          w-fit
+          mt-8
+          min-[1280px]:mt-12
+          "
+          >
+            <h4
+              className="
+            text-zinc-800
+            text-[16px]
+            min-[768px]:text-2xl
+            font-roboto
+            font-semibold 
+            mb-2
+            min-[768px]:mb-4
+            "
+            >
               Transaksi Tahun ini
             </h4>
-            <div>
+            <div
+              className="
+            bg-slate-100 
+            rounded-lg 
+            mb-2
+            px-1 
+            w-[190px] 
+            min-[320px]:w-[240px]
+            min-[375px]:w-[295px]
+            min-[425px]:w-[345px]
+            min-[768px]:w-[680px]
+            min-[1920px]:w-[1000px]
+            h-[150px]
+            min-[375px]:h-[180px]
+            min-[425px]:h-[200px]
+            min-[768px]:h-[350px]
+            min-[1920px]:h-[500px]
+            "
+            >
               <Bar options={options} data={data} height={300} width={600} />
             </div>
           </div>
