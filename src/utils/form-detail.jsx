@@ -20,25 +20,22 @@ export default function FormDetail() {
     room && (
       <div
         id="layerFormDetail"
-        className="h-screen w-screen absolute z-30 top-0 left-0 justify-center hidden"
+        className="h-screen w-screen absolute z-30 top-0 left-0 justify-center hidden bg-blue-300"
       >
         <div className="min-w-[500px] w-screen h-screen bg-primary-blue opacity-60" />
         <div
           className="
           font-raleway 
-          px-8 
+          px-4 
+          min-[320px]:px-8
           py-12 
           bg-zinc-100 
           rounded-sm 
           h-fit 
           absolute 
-          top-[70px]
-          w-[250px]
-          min-[300px]:w-[300px]
-          min-[1024px]:w-[800px] 
-          min-[1440px]:w-[1000px] 
-          min-[1700px]:w-[1300px] 
-          min-[1920px]:w-[1500px]"
+          top-[20px]
+          w-fit
+          "
         >
           <button
             onClick={close}
@@ -53,7 +50,12 @@ export default function FormDetail() {
           >
             Detail Kamar
           </div>
-          <form className="text-sm mt-4 overflow-auto font-raleway capitalize">
+          <form
+            className="
+          text-sm 
+          min-[425px]:text-[13px]
+          mt-4 overflow-auto font-raleway capitalize"
+          >
             <div
               className="
             grid 
@@ -72,7 +74,7 @@ export default function FormDetail() {
               </label>
               <span
                 className="
-                text-[10px] 
+                max-[424px]:text-[10px] 
                 text-zinc-600 
                 w-[150px]"
               >
@@ -97,7 +99,7 @@ export default function FormDetail() {
               </label>
               <span
                 className="
-                text-[10px] 
+                max-[424px]:text-[10px] 
               text-zinc-600 
               w-[150px]"
               >
@@ -122,7 +124,7 @@ export default function FormDetail() {
               </label>
               <span
                 className="
-                text-[10px] 
+                max-[424px]:text-[10px]
                 text-zinc-600 
                 w-[150px]"
               >
@@ -147,7 +149,7 @@ export default function FormDetail() {
               </label>
               <span
                 className="
-                text-[10px] 
+                max-[424px]:text-[10px] 
                 text-zinc-600 
                 w-[150px]"
               >
@@ -172,7 +174,7 @@ export default function FormDetail() {
               </label>
               <span
                 className="
-                text-[10px] 
+                max-[424px]:text-[10px] 
                 text-zinc-600 
                 w-[150px]"
               >
@@ -197,7 +199,7 @@ export default function FormDetail() {
               </label>
               <span
                 className="
-                text-[10px] 
+                max-[424px]:text-[10px] 
                 text-zinc-600 
                 w-[150px]"
               >
@@ -222,7 +224,7 @@ export default function FormDetail() {
               </label>
               <span
                 className="
-              text-[10px] 
+                max-[424px]:text-[10px] 
               text-zinc-600 
               w-[150px]"
               >
