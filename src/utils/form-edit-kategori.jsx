@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { global } from "../assets/context";
 import { layer } from "../Components/opsi";
 
-export default function FormEdit() {
+export default function FormEditKategori() {
   const loadUpdate = useContext(global).loadUpdate;
   const dataID = useContext(global).dataID;
 
@@ -14,7 +14,7 @@ export default function FormEdit() {
   }, [dataID]);
 
   const close = () => {
-    layer(document.getElementById("layerFormEdit"));
+    layer(document.getElementById("layerFormEditKategori"));
   };
 
   const submitEdit = (e) => {
@@ -55,7 +55,7 @@ export default function FormEdit() {
   return (
     room && (
       <div
-        id="layerFormEdit"
+        id="layerFormEditKategori"
         className="h-screen w-screen absolute z-30 top-0 left-0 justify-center hidden"
       >
         <div className="min-w-[500px] w-screen h-screen bg-primary-blue opacity-60" />
@@ -132,7 +132,7 @@ export default function FormEdit() {
                 </textarea>
               </div>
               <div className="grid gap-1 mb-2 ml-2">
-                <label className="text-left">No Kamar</label>
+                <label className="text-left">Nomor Kamar</label>
                 <textarea
                   name="nomorKamar"
                   className="py-[7px] h-10 pl-4 border rounded-sm bg-blue-50 active:bg-blue-100 md:w-[500px] lg:w-full"

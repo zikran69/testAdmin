@@ -2,8 +2,9 @@ import logo from "../assets/logo.png";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import auth from "../utils/auth";
 import FormTambah from "../utils/form-tambah";
-import FormEdit from "../utils/form-edit";
 import FormDetail from "../utils/form-detail";
+import FormEditKategori from "../utils/form-edit-kategori";
+import FormEditList from "../utils/form-edit-list";
 
 function PrivateRoute() {
   const navigate = useNavigate();
@@ -177,8 +178,9 @@ function PrivateRoute() {
             <Outlet />
           </div>
           <FormTambah />
-          <FormEdit />
           <FormDetail />
+          <FormEditKategori />
+          <FormEditList />
         </div>
       </>
     );

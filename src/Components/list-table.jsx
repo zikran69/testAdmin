@@ -10,11 +10,12 @@ export default function ListTable({ dataHotel, hapus }) {
   } else display = dataHotel;
 
   const opsi = (el) => {
-    if (el.target.title == "detail" || el.target.title == "icon detail")
+    if (el.target.title == "detail" || el.target.title == "icon detail") {
       updateDataID(tombolOpsi(display, el.target, "detail"));
-    else if (el.target.title == "edit" || el.target.title == "icon edit") {
+      layer(document.getElementById("layerFormDetail"));
+    } else if (el.target.title == "edit" || el.target.title == "icon edit") {
       updateDataID(tombolOpsi(display, el.target, "edit"));
-      layer(document.getElementById("layerFormEdit"));
+      layer(document.getElementById("layerFormEditList"));
     } else if (el.target.title == "hapus" || el.target.title == "icon hapus") {
       hapus(tombolOpsi(display, el.target, "hapus"));
     }
@@ -100,11 +101,11 @@ export default function ListTable({ dataHotel, hapus }) {
                         </button>
                         <button
                           type="button"
-                          title="icon edit"
+                          title="edit"
                           className="edit py-1 px-5 bg-yellow-400 rounded-md hover:bg-hover-yellow"
                         >
                           <i
-                            title="edit"
+                            title="icon edit"
                             className="ri-file-edit-line text-white"
                           ></i>
                         </button>
