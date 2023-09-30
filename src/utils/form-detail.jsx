@@ -20,7 +20,7 @@ export default function FormDetail() {
     room && (
       <div
         id="layerFormDetail"
-        className="h-screen w-screen absolute z-30 top-0 left-0 justify-center hidden bg-blue-300"
+        className="h-screen w-screen absolute z-30 top-0 left-0 justify-center hidden"
       >
         <div className="min-w-[500px] w-screen h-screen bg-primary-blue opacity-60" />
         <div
@@ -34,12 +34,17 @@ export default function FormDetail() {
           h-fit 
           absolute 
           top-[20px]
+          min-[768px]:top-[70px]
           w-fit
+          min-[768px]:w-[500px]
+          min-[1024px]:w-[700px]
+          min-[1440px]:w-[900px]
+          min-[1920px]:w-[1200px]
           "
         >
           <button
             onClick={close}
-            className="absolute right-6 top-4 font-raleway text-zinc-700 hover:bg-zinc-200 py-1 px-3 rounded-full md:text-3xl"
+            className="absolute right-6 top-4 font-raleway text-zinc-700 hover:bg-zinc-200 py-1 px-3 rounded-full lg:text-2xl"
           >
             X
           </button>
@@ -54,6 +59,9 @@ export default function FormDetail() {
             className="
           text-sm 
           min-[425px]:text-[13px]
+          min-[1024px]:text-lg
+          min-[1440px]:text-xl
+          min-[1920px]:text-2xl
           mt-4 overflow-auto font-raleway capitalize"
           >
             <div
@@ -61,6 +69,8 @@ export default function FormDetail() {
             grid 
             grid-cols-2 
             w-[220px]
+            min-[1024px]:w-[300px]
+            min-[1920px]:w-[450px]
             "
             >
               <label
@@ -76,7 +86,10 @@ export default function FormDetail() {
                 className="
                 max-[424px]:text-[10px] 
                 text-zinc-600 
-                w-[150px]"
+                w-[150px]
+                min-[768px]:w-[300px]
+                min-[1024px]:w-[500px]
+                min-[1440px]:w-[600px]"
               >
                 {room.kategori}
               </span>
@@ -86,6 +99,8 @@ export default function FormDetail() {
               grid 
               grid-cols-2 
               w-[220px]
+              min-[1024px]:w-[300px]
+              min-[1920px]:w-[450px]
               "
             >
               <label
@@ -101,7 +116,10 @@ export default function FormDetail() {
                 className="
                 max-[424px]:text-[10px] 
               text-zinc-600 
-              w-[150px]"
+              w-[150px]
+              min-[768px]:w-[300px]
+              min-[1024px]:w-[500px]
+              min-[1440px]:w-[600px]"
               >
                 {room.lantai}
               </span>
@@ -111,6 +129,8 @@ export default function FormDetail() {
               grid 
               grid-cols-2 
               w-[220px]
+              min-[1024px]:w-[300px]
+              min-[1920px]:w-[450px]
               "
             >
               <label
@@ -126,7 +146,10 @@ export default function FormDetail() {
                 className="
                 max-[424px]:text-[10px]
                 text-zinc-600 
-                w-[150px]"
+                w-[150px]
+                min-[768px]:w-[300px]
+                min-[1024px]:w-[500px]
+                min-[1440px]:w-[600px]"
               >
                 {room.nomorKamar}
               </span>
@@ -136,6 +159,8 @@ export default function FormDetail() {
               grid 
               grid-cols-2 
               w-[220px]
+              min-[1024px]:w-[300px]
+              min-[1920px]:w-[450px]
               "
             >
               <label
@@ -151,7 +176,10 @@ export default function FormDetail() {
                 className="
                 max-[424px]:text-[10px] 
                 text-zinc-600 
-                w-[150px]"
+                w-[150px]
+                min-[768px]:w-[300px]
+                min-[1024px]:w-[500px]
+                min-[1440px]:w-[600px]"
               >
                 {room.fasilitas}
               </span>
@@ -161,6 +189,8 @@ export default function FormDetail() {
               grid 
               grid-cols-2 
               w-[220px]
+              min-[1024px]:w-[300px]
+              min-[1920px]:w-[450px]
               "
             >
               <label
@@ -176,7 +206,10 @@ export default function FormDetail() {
                 className="
                 max-[424px]:text-[10px] 
                 text-zinc-600 
-                w-[150px]"
+                w-[150px]
+                min-[768px]:w-[300px]
+                min-[1024px]:w-[500px]
+                min-[1440px]:w-[600px]"
               >
                 {room.harga}
               </span>
@@ -186,6 +219,8 @@ export default function FormDetail() {
               grid 
               grid-cols-2 
               w-[220px]
+              min-[1024px]:w-[300px]
+              min-[1920px]:w-[450px]
               "
             >
               <label
@@ -201,7 +236,10 @@ export default function FormDetail() {
                 className="
                 max-[424px]:text-[10px] 
                 text-zinc-600 
-                w-[150px]"
+                w-[150px]
+                min-[768px]:w-[300px]
+                min-[1024px]:w-[500px]
+                min-[1440px]:w-[600px]"
               >
                 {room.status}
               </span>
@@ -211,6 +249,8 @@ export default function FormDetail() {
               grid 
               grid-cols-2 
               w-[220px]
+              min-[1024px]:w-[300px]
+              min-[1920px]:w-[450px]
               "
             >
               <label
@@ -226,7 +266,11 @@ export default function FormDetail() {
                 className="
                 max-[424px]:text-[10px] 
               text-zinc-600 
-              w-[150px]"
+              w-[150px]
+              min-[768px]:w-[300px]
+              min-[1024px]:w-[500px]
+              min-[1440px]:w-[600px]
+              min-[1920px]:w-[800px]"
               >
                 {room.keterangan}
               </span>
@@ -236,6 +280,8 @@ export default function FormDetail() {
               grid 
               grid-cols-2 
               w-[220px]
+              min-[1024px]:w-[300px]
+              min-[1920px]:w-[450px]
               "
             >
               <label
