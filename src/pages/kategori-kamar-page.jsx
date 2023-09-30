@@ -23,7 +23,7 @@ export default function KategoiKamarPage() {
       method: "DELETE",
     });
     loadUpdate(true);
-    alert("data dihapus!");
+    alert("berhasil dihapus!");
   };
 
   return (

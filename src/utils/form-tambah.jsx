@@ -38,6 +38,7 @@ export default function FormTambah() {
     });
     loadUpdate(true);
     close();
+    alert("berhasil ditambahkan!");
   };
 
   return (

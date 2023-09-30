@@ -129,7 +129,7 @@ export default function Dashboard() {
             <div
               className="
             bg-slate-100 
-            rounded-lg 
+            rounded-t-md
             mb-2
             px-1 
             w-[190px] 

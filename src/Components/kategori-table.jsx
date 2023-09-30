@@ -17,7 +17,8 @@ export default function KategoriTable({ dataHotel, hapus }) {
       updateDataID(tombolOpsi(display, el.target, "edit"));
       layer(document.getElementById("layerFormEditKategori"));
     } else if (el.target.title == "hapus" || el.target.title == "icon hapus") {
-      hapus(tombolOpsi(display, el.target, "hapus"));
+      window.confirm("ingin menghapus?") &&
+        hapus(tombolOpsi(display, el.target, "hapus"));
     }
   };
 
