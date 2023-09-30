@@ -1,9 +1,9 @@
+import { layer } from "./opsi";
+
 export default function TambahKamar() {
   const tambahKamar = (e) => {
     e.preventDefault();
-    const formTambah = document.getElementById("layerFormTambah");
-    formTambah.classList.toggle("hidden");
-    formTambah.classList.toggle("flex");
+    layer(document.getElementById("layerFormTambah"));
   };
   return (
     <>
