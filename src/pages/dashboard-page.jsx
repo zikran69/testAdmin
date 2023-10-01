@@ -107,8 +107,9 @@ export default function Dashboard() {
           <div
             className="
           bg-white 
-          m-4 
-          p-2 
+          lg:ml-44
+          ml-6
+          p-6 
           rounded
           w-fit
           mt-8
@@ -144,7 +145,13 @@ export default function Dashboard() {
             min-[768px]:h-[350px]
             min-[1920px]:h-[500px]
             ">
-              <Bar options={options} data={data} height={300} width={600} />
+              <Bar
+                className="justify-center"
+                options={options}
+                data={data}
+                height={300}
+                width={600}
+              />
             </div>
           </div>
         </div>
