@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import { global } from "../assets/context";
+import { layer } from "../Components/opsi";
 
 export default function FormTambah() {
   const close = () => {
-    document.getElementById("layerFormTambah").classList.toggle("hidden");
-    document.getElementById("layerFormTambah").classList.toggle("flex");
+    layer(document.getElementById("layerFormTambah"));
   };
   const loadUpdate = useContext(global).loadUpdate;
 
@@ -38,6 +38,7 @@ export default function FormTambah() {
     });
     loadUpdate(true);
     close();
+    alert("berhasil ditambahkan!");
   };
 
   return (
@@ -47,12 +48,40 @@ export default function FormTambah() {
     >
       <div className="min-w-[500px] w-screen h-screen bg-primary-blue opacity-60" />
       <div
-        className="font-raleway px-8 py-4 bg-zinc-100 rounded-sm h-fit absolute top-[70px]
-        w-[500px] min-[1024px]:w-[800px] min-[1440px]:w-[1000px] min-[1700px]:w-[1300px] min-[1920px]:w-[1500px]"
+        className="
+        font-raleway 
+        px-8 py-4 
+        bg-zinc-100 
+        rounded-sm 
+        h-fit 
+        absolute
+        top-0
+        min-[768px]:top-[70px]
+        w-fit
+        min-[1024px]:w-[800px]
+        min-[1440px]:w-[1000px]
+        min-[1920px]:w-[1400px]"
       >
-        <div className="text-center text-3xl font-semibold">Tambah Kamar</div>
-        <form onSubmit={submitTambah} className="text-sm mt-4 overflow-auto">
-          <div className="grid mx-sm:grid-cols-1 lg:grid-cols-2 lg:my-8 min-w-[350px]">
+        <div
+          className="
+        text-center 
+        text-[13px]
+        min-[768px]:text-2xl
+        min-[1440px]:text-3xl
+        min-[1920px]:text-4xl
+        font-semibold"
+        >
+          Tambah Kamar
+        </div>
+        <form
+          onSubmit={submitTambah}
+          className="
+        text-[13px]
+        min-[768px]:text-[16px]
+        mt-4 
+        overflow-auto"
+        >
+          <div className="grid grid-cols-1 min-[768px]:grid-cols-2 lg:my-8 min-w-[250px]">
             <div className="grid gap-1 mb-2 ml-2">
               <label className="text-left">Kategori Kamar</label>
               <select
@@ -99,10 +128,10 @@ export default function FormTambah() {
             <div className="grid gap-1 mb-2 ml-2">
               <label className="text-left">Fasilitas</label>
               <textarea
+              defaultValue={'ac tv'}
                 name="fasilitas"
                 className="font-raleway h-16 px-2 pt-2 border rounded-sm bg-blue-50 active:bg-blue-100 resize-none md:w-[500px] lg:w-full"
               >
-                ac, tv
               </textarea>
             </div>
             <div className="grid gap-1 mb-2 ml-2">
@@ -128,17 +157,17 @@ export default function FormTambah() {
               />
             </div>
           </div>
-          <div className="flex justify-end space-x-4 my-4">
+          <div className="flex justify-end space-x-4 my-4 mr-2">
             <button
               onClick={close}
               type="button"
-              className="bg-yellow-500 hover:bg-hover-yellow text-white font-bold py-2 px-4 rounded"
+              className="bg-yellow-500 hover:bg-hover-yellow text-white font-bold py-1 px-2 rounded"
             >
               Batal
             </button>
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-hover-blue text-white font-bold py-2 px-4 rounded"
+              className="bg-blue-500 hover:bg-hover-blue text-white font-bold py-1 px-2 rounded"
             >
               Simpan
             </button>

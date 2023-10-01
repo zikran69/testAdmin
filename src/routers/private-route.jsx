@@ -2,6 +2,9 @@ import logo from "../assets/logo.png";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import auth from "../utils/auth";
 import FormTambah from "../utils/form-tambah";
+import FormDetail from "../utils/form-detail";
+import FormEditKategori from "../utils/form-edit-kategori";
+import FormEditList from "../utils/form-edit-list";
 
 function PrivateRoute() {
   const navigate = useNavigate();
@@ -25,7 +28,9 @@ function PrivateRoute() {
             <div className="flex flex-col sm:flex-row justify-between sm:w-11/12 lg:w-full">
               <img className="w-32 ml-4" src={logo} alt="logo" />
               <div className="flex items-center">
-                <p className="sm:text-xl ml-8 mr-2">admin</p>
+                <Link to="/profile-user">
+                  <p className="sm:text-xl ml-8 mr-2">admin</p>
+                </Link>
                 <button
                   onClick={logout}
                   title="keluar"
@@ -82,7 +87,7 @@ function PrivateRoute() {
                       to="/profile"
                       className="hover:text-secondary-blue"
                     >
-                      <i className="ri-profile-line mr-2"></i>profile hotel
+                      <i className="ri-profile-line mr-2"></i>Profil Hotel
                     </Link>
                   </div>
                 </details>
@@ -173,6 +178,9 @@ function PrivateRoute() {
             <Outlet />
           </div>
           <FormTambah />
+          <FormDetail />
+          <FormEditKategori />
+          <FormEditList />
         </div>
       </>
     );

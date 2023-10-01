@@ -1,23 +1,24 @@
 import PropTypes from "prop-types";
+import { useContext } from "react";
+import { global } from "../assets/context";
+import { tombolOpsi, layer } from "./opsi";
 export default function ListTable({ dataHotel, hapus }) {
+  const updateDataID = useContext(global).updateDataID;
   let display;
   if (dataHotel == undefined) {
     display = [];
   } else display = dataHotel;
 
   const opsi = (el) => {
-    const target = el.target;
-    if (el.target.title == "detail" || target.title == "icon detail")
-      console.log("ini detail");
-    else if (target.title == "edit" || target.title == "icon edit")
-      console.log("ini edit");
-    else if (target.title == "hapus" || target.title == "icon hapus") {
-      let tr;
-      if (target.title == "hapus") {
-        tr = target.parentElement.parentElement.parentElement;
-      } else
-        tr = target.parentElement.parentElement.parentElement.parentElement;
-      hapus(display[tr.children[0].innerText - 1].id);
+    if (el.target.title == "detail" || el.target.title == "icon detail") {
+      updateDataID(tombolOpsi(display, el.target, "detail"));
+      layer(document.getElementById("layerFormDetail"));
+    } else if (el.target.title == "edit" || el.target.title == "icon edit") {
+      updateDataID(tombolOpsi(display, el.target, "edit"));
+      layer(document.getElementById("layerFormEditList"));
+    } else if (el.target.title == "hapus" || el.target.title == "icon hapus") {
+      window.confirm("ingin menghapus?") &&
+        hapus(tombolOpsi(display, el.target, "hapus"));
     }
   };
 
@@ -101,11 +102,11 @@ export default function ListTable({ dataHotel, hapus }) {
                         </button>
                         <button
                           type="button"
-                          title="icon edit"
+                          title="edit"
                           className="edit py-1 px-5 bg-yellow-400 rounded-md hover:bg-hover-yellow"
                         >
                           <i
-                            title="edit"
+                            title="icon edit"
                             className="ri-file-edit-line text-white"
                           ></i>
                         </button>
