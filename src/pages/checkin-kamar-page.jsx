@@ -4,17 +4,29 @@ import TableRowCheckIn from '../Components/TableRowCheckIn'
 
 export default function CheckinKamarPage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [, setSelectedId] = useState(null)
   const { data, isLoading } = useGetDataCheck('https://shy-pink-mussel-veil.cyclic.cloud/customer/not-check-out')
-  console.log(data)
+
+  const handleBtnClick = (id) => {
+    setIsModalOpen(true)
+    setSelectedId(id)
+  }
   return (
     <div className='w-full'>
       <main className='bg-primary-gray grow overflow-y-auto'>
-        <div id='modal-overlay' className='hidden bg-black h-full w-full absolute top-0 left-0 opacity-90'></div>
+        <div id='modal-overlay' className={`${isModalOpen ? '' : 'hidden'} bg-black h-full w-full absolute top-0 left-0 opacity-90`}></div>
         <div className='p-2 h-[calc(100vh-67.33px)]'>
           <div className='mb-4'>
             <h1 className='text-2xl font-semibold'>Check In</h1>
           </div>
           <div className='p-6 m-3 bg-white'>
+          {isLoading ? (
+                <div className='grid place-items-center fixed inset-0 w-screen h-screen'>
+                  <h1 className='text-center text-zinc-500 text-7xl animate-bounce'>Loading</h1>
+                </div>
+              ) : (
+                <></>
+              )}
             <div
               id='modal'
               className={`${
@@ -276,25 +288,22 @@ export default function CheckinKamarPage() {
                 </tr>
               </thead>
               <tbody>
-               { isLoading ? (
-                 <div className='grid place-items-center'>
-                  <h1 className='text-center text-7xl'>Loading</h1>
-                 </div>
-               ) : ''}
-              {data ? (
+                {data ? (
                   data.filterCustomers.map((item, index) => (
-                   <TableRowCheckIn
-                     key={item.id}
-                     no={index + 1}
-                     idRegistrasi={item.id}
-                     nik={item.nik}
-                     nama={item.name}
-                     noKamar={item.noKamar}
-                     tanggalCheckin={item.tanggalCheckIn}
-                     onClick={() => isModalOpen(true)}
-                   />
+                    <TableRowCheckIn
+                      key={item.id}
+                      no={index + 1}
+                      idRegistrasi={item.id}
+                      nik={item.nik}
+                      nama={item.name}
+                      noKamar={item.noKamar}
+                      tanggalCheckin={item.tanggalCheckIn}
+                      onBtnClick={handleBtnClick}
+                    />
                   ))
-              ) : ''}
+                ) : (
+                  <></>
+                )}
               </tbody>
             </table>
           </div>
