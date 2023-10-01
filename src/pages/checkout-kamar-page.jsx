@@ -1,16 +1,34 @@
 import { useState } from 'react'
+import useGetDataCheck from '../hooks/useGetDataCheck'
+import TableRowCheckOut from '../Components/TableRowCheckOut'
 
 export default function CheckoutKamarpage() {
   const [isModalOpen, setIsModalOpen] = useState(false)
+  const [, setSelectedId] = useState(null)
+  const { data, isLoading } = useGetDataCheck('https://shy-pink-mussel-veil.cyclic.cloud/customer/check-out')
+  const handleBtnClick = (id) => {
+    setIsModalOpen(true)
+    setSelectedId(id)
+  }
   return (
     <div className='w-full'>
       <main className='bg-primary-gray grow overflow-y-auto'>
-        <div id='modal-overlay' className='hidden bg-black h-full w-full absolute top-0 left-0 opacity-90'></div>
+        <div
+          onClick={() => setIsModalOpen(false)}
+          className={`${isModalOpen ? '' : 'hidden'} z-40 bg-black h-full w-full absolute top-0 left-0 opacity-90`}
+        ></div>
         <div className='p-2 h-[calc(100vh-67.33px)]'>
           <div className='mb-4'>
             <h1 className='text-2xl font-semibold'>Check out</h1>
           </div>
           <div className='p-6 m-3 bg-white'>
+            {isLoading ? (
+              <div className='grid place-items-center fixed inset-0 w-screen h-screen'>
+                <h1 className='text-center text-zinc-500 text-7xl animate-bounce'>Loading</h1>
+              </div>
+            ) : (
+              <></>
+            )}
             <div
               id='modal'
               className={`${
@@ -272,321 +290,22 @@ export default function CheckoutKamarpage() {
                 </tr>
               </thead>
               <tbody>
-                <tr className='odd:bg-zinc-400 odd:bg-opacity-10 md:odd:bg-transparent'>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='no'
-                  >
-                    1
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='id-registrasi'
-                  >
-                    REG001
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='nik'
-                  >
-                    1234567890
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='nama'
-                  >
-                    John Doe
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='no-kamar'
-                  >
-                    101
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='tanggal-checkin'
-                  >
-                    2023-08-01
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize sm:before:content-[attr(data-cell)':'] before:block before:font-semibold flex sm:justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10 md:text-center"
-                    data-cell='opsi'
-                  >
-                    <div className='min-w-[190px] w-full flex justify-center'>
-                      <button onClick={() => setIsModalOpen(true)} title='detail' className='mr-1 px-5 py-1 bg-green-400 hover:bg-hover-green rounded-md'>
-                        {' '}
-                        <i className='ri-search-line text-white'> </i>
-                      </button>
-                      <button
-                        type='button'
-                        title='hapus'
-                        className='mr-1 py-1 px-5 bg-red-400 rounded-md hover:bg-hover-red'
-                      >
-                        <i className='ri-delete-bin-line text-white'></i>
-                      </button>
-                      <button
-                        type='button'
-                        title='edit'
-                        className='py-1 px-5 bg-yellow-400 rounded-md hover:bg-hover-yellow'
-                      >
-                        <i className='ri-file-edit-line text-white'></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr className='odd:bg-zinc-400 odd:bg-opacity-10 md:odd:bg-transparent'>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='no'
-                  >
-                    2
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='id-registrasi'
-                  >
-                    REG002
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='nik'
-                  >
-                    9876543210
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='nama'
-                  >
-                    Jane Smith
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='no-kamar'
-                  >
-                    102
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='tanggal-checkin'
-                  >
-                    2023-08-02
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize sm:before:content-[attr(data-cell)':'] before:block before:font-semibold flex sm:justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10 md:text-center"
-                    data-cell='opsi'
-                  >
-                    <div className='min-w-[190px] w-full flex justify-center'>
-                      <button onClick={() => setIsModalOpen(true)} title='detail' className='mr-1 px-5 py-1 bg-green-400 hover:bg-hover-green rounded-md'>
-                        {' '}
-                        <i className='ri-search-line text-white'> </i>
-                      </button>
-                      <button
-                        type='button'
-                        title='hapus'
-                        className='mr-1 py-1 px-5 bg-red-400 rounded-md hover:bg-hover-red'
-                      >
-                        <i className='ri-delete-bin-line text-white'></i>
-                      </button>
-                      <button
-                        type='button'
-                        title='edit'
-                        className='py-1 px-5 bg-yellow-400 rounded-md hover:bg-hover-yellow'
-                      >
-                        <i className='ri-file-edit-line text-white'></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr className='odd:bg-zinc-400 odd:bg-opacity-10 md:odd:bg-transparent'>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='no'
-                  >
-                    3
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='id-registrasi'
-                  >
-                    REG003
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='nik'
-                  >
-                    5555555555
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='nama'
-                  >
-                    Michael Johnson
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='no-kamar'
-                  >
-                    103
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='tanggal-checkin'
-                  >
-                    2023-08-03
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize sm:before:content-[attr(data-cell)':'] before:block before:font-semibold flex sm:justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10 md:text-center"
-                    data-cell='opsi'
-                  >
-                    <div className='min-w-[190px] w-full flex justify-center'>
-                      <button onClick={() => setIsModalOpen(true)} title='detail' className='mr-1 px-5 py-1 bg-green-400 hover:bg-hover-green rounded-md'>
-                        {' '}
-                        <i className='ri-search-line text-white'> </i>
-                      </button>
-                      <button
-                        type='button'
-                        title='hapus'
-                        className='mr-1 py-1 px-5 bg-red-400 rounded-md hover:bg-hover-red'
-                      >
-                        <i className='ri-delete-bin-line text-white'></i>
-                      </button>
-                      <button
-                        type='button'
-                        title='edit'
-                        className='py-1 px-5 bg-yellow-400 rounded-md hover:bg-hover-yellow'
-                      >
-                        <i className='ri-file-edit-line text-white'></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr className='odd:bg-zinc-400 odd:bg-opacity-10 md:odd:bg-transparent'>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='no'
-                  >
-                    4
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='id-registrasi'
-                  >
-                    REG004
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='nik'
-                  >
-                    1111111111
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='nama'
-                  >
-                    Susan Williams
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='no-kamar'
-                  >
-                    104
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='tanggal-checkin'
-                  >
-                    2023-08-04
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize sm:before:content-[attr(data-cell)':'] before:block before:font-semibold flex sm:justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10 md:text-center"
-                    data-cell='opsi'
-                  >
-                    <div className='min-w-[190px] w-full flex justify-center'>
-                      <button onClick={() => setIsModalOpen(true)} title='detail' className='mr-1 px-5 py-1 bg-green-400 hover:bg-hover-green rounded-md'>
-                        {' '}
-                        <i className='ri-search-line text-white'> </i>
-                      </button>
-                      <button
-                        type='button'
-                        title='hapus'
-                        className='mr-1 py-1 px-5 bg-red-400 rounded-md hover:bg-hover-red'
-                      >
-                        <i className='ri-delete-bin-line text-white'></i>
-                      </button>
-                      <button
-                        type='button'
-                        title='edit'
-                        className='py-1 px-5 bg-yellow-400 rounded-md hover:bg-hover-yellow'
-                      >
-                        <i className='ri-file-edit-line text-white'></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-                <tr className='odd:bg-zinc-400 odd:bg-opacity-10 md:odd:bg-transparent'>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='no'
-                  >
-                    5
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='id-registrasi'
-                  >
-                    REG005
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='nik'
-                  >
-                    9999999999
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='nama'
-                  >
-                    Robert Brown
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='no-kamar'
-                  >
-                    105
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize before:content-[attr(data-cell)':'] before:block before:font-semibold flex justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10"
-                    data-cell='tanggal-checkin'
-                  >
-                    2023-08-05
-                  </td>
-                  <td
-                    className="md:before:content-none before:capitalize sm:before:content-[attr(data-cell)':'] before:block before:font-semibold flex sm:justify-between md:table-cell p-3 border-secondary-gray border-2 border-opacity-10 md:text-center"
-                    data-cell='opsi'
-                  >
-                    <div className='min-w-[190px] w-full flex justify-center'>
-                      <button onClick={() => setIsModalOpen(true)} title='detail' className='mr-1 px-5 py-1 bg-green-400 hover:bg-hover-green rounded-md'>
-                        {' '}
-                        <i className='ri-search-line text-white'> </i>
-                      </button>
-                      <button
-                        type='button'
-                        title='hapus'
-                        className='mr-1 py-1 px-5 bg-red-400 rounded-md hover:bg-hover-red'
-                      >
-                        <i className='ri-delete-bin-line text-white'></i>
-                      </button>
-                      <button
-                        type='button'
-                        title='edit'
-                        className='py-1 px-5 bg-yellow-400 rounded-md hover:bg-hover-yellow'
-                      >
-                        <i className='ri-file-edit-line text-white'></i>
-                      </button>
-                    </div>
-                  </td>
-                </tr>
+                {data ? (
+                  data.filterCustomers.map((item, index) => (
+                    <TableRowCheckOut
+                      key={item.id}
+                      no={index + 1}
+                      idRegistrasi={item.id}
+                      nik={item.nik}
+                      nama={item.name}
+                      noKamar={item.noKamar}
+                      tanggalCheckin={item.tanggalCheckIn}
+                      onBtnClick={handleBtnClick}
+                    />
+                  ))
+                ) : (
+                  <></>
+                )}
               </tbody>
             </table>
           </div>
