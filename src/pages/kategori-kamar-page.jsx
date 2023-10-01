@@ -16,14 +16,20 @@ export default function KategoiKamarPage() {
   }, [dataHotel]);
 
   const cari = (value) => {
-    setDisplay(dataHotel.filter((e) => e.kategori.includes(value)));
+    const url = new URL(
+      "https://6507a74b3a38daf4803f9ee4.mockapi.io/api/v1/rooms"
+    );
+    url.searchParams.append("kategori", value);
+    fetch(url)
+      .then((res) => res.json())
+      .then(setDisplay);
   };
   const hapus = (value) => {
     fetch(`https://6507a74b3a38daf4803f9ee4.mockapi.io/api/v1/rooms/${value}`, {
       method: "DELETE",
     });
     loadUpdate(true);
-    alert("data dihapus!");
+    alert("berhasil dihapus!");
   };
 
   return (

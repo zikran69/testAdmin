@@ -24,7 +24,7 @@ export default function ListKamarPage() {
       method: "DELETE",
     });
     loadUpdate(true);
-    alert("data dihapus!");
+    alert("berhasil dihapus!");
   };
 
   return (
