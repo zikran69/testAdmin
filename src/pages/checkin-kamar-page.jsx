@@ -14,19 +14,22 @@ export default function CheckinKamarPage() {
   return (
     <div className='w-full'>
       <main className='bg-primary-gray grow overflow-y-auto'>
-        <div id='modal-overlay' className={`${isModalOpen ? '' : 'hidden'} bg-black h-full w-full absolute top-0 left-0 opacity-90`}></div>
+        <div
+          onClick={() => setIsModalOpen(false)}
+          className={`${isModalOpen ? '' : 'hidden'} z-40 bg-black h-full w-full absolute top-0 left-0 opacity-90`}
+        ></div>
         <div className='p-2 h-[calc(100vh-67.33px)]'>
           <div className='mb-4'>
             <h1 className='text-2xl font-semibold'>Check In</h1>
           </div>
           <div className='p-6 m-3 bg-white'>
-          {isLoading ? (
-                <div className='grid place-items-center fixed inset-0 w-screen h-screen'>
-                  <h1 className='text-center text-zinc-500 text-7xl animate-bounce'>Loading</h1>
-                </div>
-              ) : (
-                <></>
-              )}
+            {isLoading ? (
+              <div className='grid place-items-center fixed inset-0 w-screen h-screen'>
+                <h1 className='text-center text-zinc-500 text-7xl animate-bounce'>Loading</h1>
+              </div>
+            ) : (
+              <></>
+            )}
             <div
               id='modal'
               className={`${

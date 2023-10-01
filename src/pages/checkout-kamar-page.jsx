@@ -14,8 +14,8 @@ export default function CheckoutKamarpage() {
     <div className='w-full'>
       <main className='bg-primary-gray grow overflow-y-auto'>
         <div
-          id='modal-overlay'
-          className={`${isModalOpen ? '' : 'hidden'} bg-black h-full w-full absolute top-0 left-0 opacity-90`}
+          onClick={() => setIsModalOpen(false)}
+          className={`${isModalOpen ? '' : 'hidden'} z-40 bg-black h-full w-full absolute top-0 left-0 opacity-90`}
         ></div>
         <div className='p-2 h-[calc(100vh-67.33px)]'>
           <div className='mb-4'>
