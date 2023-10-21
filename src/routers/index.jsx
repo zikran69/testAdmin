@@ -15,7 +15,6 @@ import CheckoutKamarpage from "../pages/checkout-kamar-page";
 import LaporanPage from "../pages/laporan-page";
 import AdministratorPage from "../Components/administrator/administrator-page";
 import ProfilAdmin from "../Components/ProfilAdmin/ProfilAdmin";
-import TambahKamar from "../Components/tambah-kamar";
 import TambahKamarForm from "../pages/tambah-kamar";
 import UpdateKamarForm from "../pages/update-kamar";
 import DetailKamarForm from "../pages/detail-kamar";
