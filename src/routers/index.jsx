@@ -19,6 +19,9 @@ import TambahKamarForm from "../pages/tambah-kamar";
 import UpdateKamarForm from "../pages/update-kamar";
 import DetailKamarForm from "../pages/detail-kamar";
 
+import AddCategory from "../Components/category/add-category";
+import DetailCategory from "../Components/category/detail-category";
+
 export default function Router() {
   return (
     <Routes>
@@ -32,6 +35,8 @@ export default function Router() {
           <Route path="/administrator" element={<AdministratorPage />} />
           <Route path="profile" element={<ProfilePage />} />
           <Route path="/kategori-kamar" element={<KategoriKamarPage />} />
+          <Route path="/category-add" element={<AddCategory />} />
+          <Route path="/category-detail" element={<DetailCategory />} />
           <Route path="/lantai-kamar" element={<LantaiKamarPage />} />
           <Route path="/list-kamar" element={<ListKamarPage />} />
           <Route path="/tambah-kamar" element={<TambahKamarForm />} />

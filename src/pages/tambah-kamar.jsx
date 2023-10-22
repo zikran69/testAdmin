@@ -2,14 +2,14 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function TambahKamarForm() {
-  const navigate = useNavigate();
-
   const [categoryId, setCategory] = useState("");
   const [floorId, setFloor] = useState("");
   const [nameRoom, setName] = useState("");
   const [numberRoom, setNumber] = useState("");
   const [descRoom, setDesc] = useState("");
   const [statusId, setStatus] = useState("");
+
+  const navigate = useNavigate();
 
   const handlesubmit = (e) => {
     e.preventDefault();
@@ -27,7 +27,7 @@ export default function TambahKamarForm() {
       headers: { "content-type": "application/json" },
       body: JSON.stringify(admData),
     })
-      .then((res) => {
+      .then(() => {
         alert("Saved successfully.");
         navigate("/list-kamar");
       })
@@ -57,8 +57,10 @@ export default function TambahKamarForm() {
                         <select
                           onChange={(e) => setCategory(e.target.value)}
                           required
-                          className="h-10 border mt-1 rounded px-4 w-full bg-gray-0">
-                          <option value={""}>--select--</option>
+
+                          className="h-10 border mt-1 rounded px-4 w-full bg-gray-0"
+                        >
+         <option value={""}>--select--</option>
                           <option value={1}>Admin</option>
                           <option value={2}>Superadmin</option>
                         </select>
@@ -67,7 +69,10 @@ export default function TambahKamarForm() {
                         <label>Floor</label>
                         <select
                           onChange={(e) => setFloor(e.target.value)}
-                          className="h-10 border mt-1 rounded px-4 w-full bg-gray-0">
+
+                          className="h-10 border mt-1 rounded px-4 w-full bg-gray-0"
+                        >
+
                           <option value={""}>--select--</option>
                           <option value={1}>1</option>
                           <option value={2}>2</option>
@@ -88,7 +93,10 @@ export default function TambahKamarForm() {
                         <select
                           onChange={(e) => setNumber(e.target.value)}
                           required
-                          className="h-10 border mt-1 rounded px-4 w-full bg-gray-0">
+
+                          className="h-10 border mt-1 rounded px-4 w-full bg-gray-0"
+                        >
+
                           <option value={""}>--select--</option>
                           <option value={1}>1</option>
                           <option value={2}>2</option>
@@ -110,7 +118,10 @@ export default function TambahKamarForm() {
                         <select
                           onChange={(e) => setStatus(e.target.value)}
                           required
-                          className="h-10 border mt-1 rounded px-4 w-full bg-gray-0">
+
+                          className="h-10 border mt-1 rounded px-4 w-full bg-gray-0"
+                        >
+
                           <option value={""}>--select--</option>
                           <option value={1}>Empty</option>
                           <option value={2}>Booked</option>
