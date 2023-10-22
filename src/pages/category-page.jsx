@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function CategoryPage() {
   const [categories, setCategories] = useState(null);
+  const [dataValue, setDataValue] = useState("all");
   useState(() => {
     fetch("http://localhost:2000/categories")
       .then((res) => res.json())
@@ -17,6 +18,7 @@ export default function CategoryPage() {
   const navigate = useNavigate();
 
   const search = (value) => {
+    setDataValue(value);
     if (value == "all") {
       fetch(`http://localhost:2000/categories`)
         .then((res) => res.json())
@@ -34,11 +36,8 @@ export default function CategoryPage() {
       .then((res) => res.json())
       .then((res) => alert(res.message));
     setTimeout(() => {
-      fetch(`http://localhost:2000/categories`)
-        .then((res) => res.json())
-        .then(setCategories);
+      search(dataValue);
     }, 1000);
-    navigate("/category-page");
   };
 
   return (
