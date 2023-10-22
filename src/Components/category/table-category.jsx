@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
 import { useContext } from "react";
-import { global } from "../assets/context";
-import { optionButton } from "../Components/category/option-button";
+import { global } from "../../assets/context";
+import { optionButton } from "./option-button";
 import { useNavigate } from "react-router-dom";
-export default function KategoriTable({ categories, deleteCategory }) {
+
+export default function TableCategory({ categories, deleteCategory }) {
   const updateDataID = useContext(global).updateDataID;
   const navigate = useNavigate();
   let display;
@@ -16,7 +17,8 @@ export default function KategoriTable({ categories, deleteCategory }) {
       updateDataID(optionButton(display, el.target, "detail"));
       navigate("/category-detail");
     } else if (el.target.title == "edit" || el.target.title == "icon edit") {
-      // updateDataID(optionButton(display, el.target, "edit"));
+      updateDataID(optionButton(display, el.target, "edit"));
+      navigate("/category-edit");
     } else if (
       el.target.title == "delete" ||
       el.target.title == "icon delete"
@@ -115,7 +117,7 @@ export default function KategoriTable({ categories, deleteCategory }) {
   }
 }
 
-KategoriTable.propTypes = {
+TableCategory.propTypes = {
   categories: PropTypes.array,
   deleteCategory: PropTypes.func,
 };

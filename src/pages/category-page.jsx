@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-import KategoriTable from "../Components/kategori-table";
+import TableCategory from "../Components/category/table-category";
 import SearchCategory from "../Components/category/search-category";
 import { useNavigate } from "react-router-dom";
 
-export default function KategoiKamarPage() {
+export default function CategoryPage() {
   const [categories, setCategories] = useState(null);
   useState(() => {
     fetch("http://localhost:2000/categories")
@@ -38,6 +38,7 @@ export default function KategoiKamarPage() {
         .then((res) => res.json())
         .then(setCategories);
     }, 1000);
+    navigate("/category-page");
   };
 
   return (
@@ -54,7 +55,7 @@ export default function KategoiKamarPage() {
             </button>
             <SearchCategory search={search} />
           </div>
-          <KategoriTable categories={categories} deleteCategory={deleting} />
+          <TableCategory categories={categories} deleteCategory={deleting} />
         </form>
       </div>
     </div>
