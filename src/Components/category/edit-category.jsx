@@ -1,28 +1,36 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { global } from "../../assets/context";
 
-export default function AddCategory() {
-  const [addCategory, setAddCategory] = useState(null);
+export default function EditCategory() {
+  const [getCategory, setGetCategory] = useState(null);
+  const [editCategory, setEditCategory] = useState(null);
   const navigate = useNavigate();
+  const dataId = useContext(global).dataId;
   useEffect(() => {
-    if (addCategory) {
-      fetch("http://localhost:2000/category-add", {
-        method: "POST",
+    fetch(`http://localhost:2000/category/${dataId}`)
+      .then((res) => res.json())
+      .then(setGetCategory);
+  }, []);
+
+  useEffect(() => {
+    if (editCategory) {
+      fetch(`http://localhost:2000/category-update/${dataId}`, {
+        method: "PUT",
         headers: { "content-type": "application/json" },
-        body: JSON.stringify(addCategory),
+        body: JSON.stringify(editCategory),
       })
         .then((res) => res.json())
-        .then((res) => alert(res.message))
-        .catch((error) => console.log(error.message));
+        .then((res) => alert(res.message));
     }
-  }, [addCategory]);
+  }, [editCategory]);
 
   const handlesubmit = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const { nameCategory, price, facilityCategory, descCategory } =
       Object.fromEntries(formData);
-    setAddCategory({
+    setEditCategory({
       nameCategory: nameCategory,
       price: price,
       facilityCategory: facilityCategory,
@@ -32,9 +40,8 @@ export default function AddCategory() {
       navigate("/category-page");
     }, 1000);
   };
-
   return (
-    <>
+    getCategory && (
       <div className="w-full">
         <main className="bg-primary-gray grow overflow-y-auto">
           <div
@@ -43,7 +50,7 @@ export default function AddCategory() {
           ></div>
           <div className="p-4 h-[calc(100vh-67.33px)]">
             <div>
-              <h1 className="text-2xl font-semibold">Form Add Category</h1>
+              <h1 className="text-2xl font-semibold">Form Edit Category</h1>
             </div>
             <div className="p-4">
               <div className="p-6 bg-white border border-gray-200 rounded-lg shadow">
@@ -57,7 +64,9 @@ export default function AddCategory() {
                           required
                           className="h-10 border mt-1 rounded px-4 w-full bg-gray-0"
                         >
-                          <option value={""}>--select--</option>
+                          <option value={getCategory.nameCategory}>
+                            {getCategory.nameCategory}
+                          </option>
                           <option value={"Junior Suite"}>Junior Suite</option>
                           <option value={"Executive Suite"}>
                             Executive Suite
@@ -72,7 +81,7 @@ export default function AddCategory() {
                           required
                           type="text"
                           className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                          placeholder="price"
+                          placeholder={getCategory.price}
                         />
                       </div>
                       <div className="md:col-span-3">
@@ -82,7 +91,7 @@ export default function AddCategory() {
                           required
                           type="text"
                           className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                          placeholder="facilities"
+                          placeholder={getCategory.facilityCategory}
                         />
                       </div>
                       <div className="md:col-span-3">
@@ -92,7 +101,7 @@ export default function AddCategory() {
                           required
                           type="text"
                           className="h-10 border mt-1 rounded px-4 w-full bg-gray-50"
-                          placeholder="description"
+                          placeholder={getCategory.descCategory}
                         />
                       </div>
                     </div>
@@ -119,6 +128,6 @@ export default function AddCategory() {
           </div>
         </main>
       </div>
-    </>
+    )
   );
 }
