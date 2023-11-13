@@ -6,7 +6,9 @@ const LaporanPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:2000/reports");
+        const response = await fetch(
+          "https://apibackendtest.vercel.app/reports",
+        );
         const data = await response.json();
         setLaporan(data.data);
       } catch (error) {

@@ -8,14 +8,14 @@ export default function EditCategory() {
   const navigate = useNavigate();
   const dataId = useContext(global).dataId;
   useEffect(() => {
-    fetch(`http://localhost:2000/category/${dataId}`)
+    fetch(`https://apibackendtest.vercel.app/category/${dataId}`)
       .then((res) => res.json())
       .then(setGetCategory);
   }, []);
 
   useEffect(() => {
     if (editCategory) {
-      fetch(`http://localhost:2000/category/update/${dataId}`, {
+      fetch(`https://apibackendtest.vercel.app/category/update/${dataId}`, {
         method: "PUT",
         headers: { "content-type": "application/json" },
         body: JSON.stringify(editCategory),

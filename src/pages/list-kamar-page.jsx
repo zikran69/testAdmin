@@ -9,11 +9,10 @@ import { Link } from "react-router-dom";
 export default function ListKamarPage() {
   const [state, setState] = useState();
   useEffect(() => {
-    fetch("http://localhost:2000/rooms")
+    fetch("https://apibackendtest.vercel.app/rooms")
       .then((res) => res.json())
       .then(setState);
   }, []);
-  
 
   return (
     <div className="w-full lg:w-[calc(100vw-220px)]">
@@ -23,9 +22,9 @@ export default function ListKamarPage() {
           <div className="grid gap-5 place-items-start sm:flex justify-between m-4 ">
             {/* <TambahKamarForm /> */}
             <Link to="/tambah-kamar">
-            <button className="py-2 px-5 bg-blue-400 rounded-md text-sm text-white hover:bg-hover-blue">
-              <i className="ri-hotel-bed-line mr-2"></i>Add Room
-            </button>
+              <button className="py-2 px-5 bg-blue-400 rounded-md text-sm text-white hover:bg-hover-blue">
+                <i className="ri-hotel-bed-line mr-2"></i>Add Room
+              </button>
             </Link>
             {/* <Cari cari={cari} /> */}
           </div>

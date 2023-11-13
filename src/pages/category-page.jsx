@@ -8,7 +8,7 @@ export default function CategoryPage() {
   const [categories, setCategories] = useState(null);
   const [dataValue, setDataValue] = useState("all");
   useState(() => {
-    fetch("http://localhost:2000/category")
+    fetch("https://apibackendtest.vercel.app/category")
       .then((res) => res.json())
       .then(setCategories)
       .catch((error) => {
@@ -20,17 +20,17 @@ export default function CategoryPage() {
   const search = (value) => {
     setDataValue(value);
     if (value == "all") {
-      fetch(`http://localhost:2000/category`)
+      fetch(`https://apibackendtest.vercel.app/category`)
         .then((res) => res.json())
         .then(setCategories);
     } else
-      fetch(`http://localhost:2000/category/search/${value}`)
+      fetch(`https://apibackendtest.vercel.app/category/search/${value}`)
         .then((res) => res.json())
         .then(setCategories);
   };
 
   const deleting = (value) => {
-    fetch(`http://localhost:2000/category/delete/${value}`, {
+    fetch(`https://apibackendtest.vercel.app/category/delete/${value}`, {
       method: "DELETE",
     })
       .then((res) => res.json())

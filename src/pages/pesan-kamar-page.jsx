@@ -36,7 +36,7 @@ export default function PesanKamarPage() {
       fotoCustomer,
     };
 
-    fetch("http://localhost:2000/booking", {
+    fetch("https://apibackendtest.vercel.app/booking", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(bookingData),

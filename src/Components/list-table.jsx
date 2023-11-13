@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 export default function ListTable({ dataHotel }) {
   const Removefunction = (id) => {
     if (window.confirm("Do you want to remove?")) {
-      fetch("http://localhost:2000/rooms/" + id, {
+      fetch("https://apibackendtest.vercel.app/rooms/" + id, {
         method: "DELETE",
       })
         .then((res) => {

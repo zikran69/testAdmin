@@ -8,7 +8,7 @@ export default function DetailCategory() {
   const navigate = useNavigate();
   const dataId = useContext(global).dataId;
   useEffect(() => {
-    fetch(`http://localhost:2000/category/${dataId}`)
+    fetch(`https://apibackendtest.vercel.app/category/${dataId}`)
       .then((res) => res.json())
       .then(setCategoryId);
   }, []);
