@@ -6,7 +6,9 @@ const CustomerPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:2000/customer");
+        const response = await fetch(
+          "https://apibackendtest.vercel.app/customer",
+        );
         const data = await response.json();
         setCustomer(data.data);
       } catch (error) {
