@@ -50,7 +50,7 @@ function PrivateRoute() {
             ></div>
             <aside
               id="sidebar"
-              className="p-4 hidden lg:block text-dark font-medium lg:w-[220px] h-screen lg:h-full absolute lg:static top-0 left-0 bg-white shrink-0 overflow-auto w-[300px] z-30"
+              className="p-4 hidden lg:block text-dark lg:text-[15px] font-medium lg:w-[220px] h-screen lg:h-full absolute lg:static top-0 left-0 bg-white shrink-0 overflow-auto w-[300px] z-30"
             >
               <h4 className="mb-3 font-semibold">Menu</h4>
               <div className="mb-2">
@@ -63,8 +63,8 @@ function PrivateRoute() {
                 </Link>
               </div>
               <div className="space-y-2">
-                <details open className="space-y-2">
-                  <summary className="hover:text-secondary-blue cursor-pointer list-none space-y-2 bg-third-gray rounded-lg p-2 w-[150px] border-2 border-blue-500 mt-[15px]">
+                <details open className="space-y-3">
+                  <summary className="hover:text-secondary-blue cursor-pointer list-none space-y-2 bg-third-gray rounded-lg p-2  border-2 border-blue-500 mt-[15px]">
                     <i className="ri-settings-5-fill mr-2"></i>Pengaturan
                     <i className="ri-arrow-drop-down-line"></i>
                   </summary>
@@ -88,8 +88,8 @@ function PrivateRoute() {
                     </Link>
                   </div>
                 </details>
-                <details open className="space-y-2">
-                  <summary className="hover:text-secondary-blue cursor-pointer list-none space-y-2 bg-third-gray rounded-lg p-2 w-[150px] border-2 border-blue-500">
+                <details open className="space-y-3">
+                  <summary className="hover:text-secondary-blue cursor-pointer list-none space-y-2 bg-third-gray rounded-lg p-1 w-flex border-2 border-blue-500">
                     <i className="ri-building-4-line mr-2"></i>Data Kamar
                     <i className="ri-arrow-drop-down-line"></i>
                   </summary>
@@ -97,7 +97,7 @@ function PrivateRoute() {
                     <Link
                       onClick={popUp}
                       to="/category-page"
-                      className="hover:text-secondary-blue bg-fourth-gray rounded-lg p-1 px-[10px] border-2 border-red-400"
+                      className="hover:text-secondary-blue bg-fourth-gray rounded-lg p-1 px-flex border-2 border-red-400"
                     >
                       <i className="ri-hotel-bed-line mr-2"></i>Kategori Kamar
                     </Link>
@@ -106,14 +106,14 @@ function PrivateRoute() {
                     <Link
                       onClick={popUp}
                       to="/list-kamar"
-                      className="hover:text-secondary-blue bg-fourth-gray rounded-lg p-1 px-[28px] border-2 border-red-400"
+                      className="hover:text-secondary-blue bg-fourth-gray rounded-lg p-1 px-flex border-2 border-red-400"
                     >
                       <i className="ri-list-indefinite mr-2"></i>List Kamar
                     </Link>
                   </div>
                 </details>
-                <details open className="space-y-2 ">
-                  <summary className="hover:text-secondary-blue cursor-pointer list-none space-y-2 bg-third-gray rounded-lg p-2 w-[150px] border-2 border-blue-500 mb-[10px]">
+                <details open className="space-y-3 ">
+                  <summary className="hover:text-secondary-blue cursor-pointer list-none space-y-2 bg-third-gray rounded-lg p-2 w-flex border-2 border-blue-500 mb-[10px]">
                     <i className="ri-currency-fill mr-2"></i>Transaksi
                     <i className="ri-arrow-drop-down-line"></i>
                   </summary>
